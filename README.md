@@ -2,6 +2,8 @@
 
 A mod menu for Red Dead Redemption 2 and Red Dead Online published by Rockstar Games. Strictly for educational purposes.
 
+### This fork is aiming more on the single player side of the menu
+
 ## How to use
 Use a popular injector (Xenos/Extreme Injector/Etc.) and inject into rdr2.exe
 
