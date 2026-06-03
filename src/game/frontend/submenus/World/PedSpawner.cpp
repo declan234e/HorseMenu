@@ -78,6 +78,7 @@ namespace YimMenu::Submenus
 		static float scale = 1;
 		static bool dead, invis, godmode, freeze, companion, sedated;
 		static int formation;
+		static int variation = 0;
 		static std::vector<YimMenu::Ped> spawnedPeds;
 		InputTextWithHint("##pedmodel", "Ped Model", &pedModelBuffer, ImGuiInputTextFlags_CallbackCompletion, nullptr, PedSpawnerInputCallback)
 		    .Draw();
@@ -131,6 +132,12 @@ namespace YimMenu::Submenus
 		}
 		ImGui::SliderFloat("Scale", &scale, 0.1, 10);
 
+		ImGui::SliderInt("Variation/Outfit", &variation, 0, 10);
+		ImGui::SameLine();
+		ImGui::TextDisabled("(?)");
+		if (ImGui::IsItemHovered())
+			ImGui::SetTooltip("Does not guarantee a valid outfit/variation you may have to find it though search.");
+
 		if (ImGui::Button("Spawn"))
 		{
 			FiberPool::Push([] {
@@ -140,6 +147,8 @@ namespace YimMenu::Submenus
 					return;
 
 				ped.SetFrozen(freeze);
+
+				ped.SetVariation(variation);
 
 				if (dead)
 				{
