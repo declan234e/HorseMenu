@@ -5,6 +5,7 @@
 #include "World/Train.hpp"
 #include "World/VehicleSpawner.hpp"
 #include "World/Weather.hpp"
+#include "World/HerbSpawner.hpp"
 #include "core/commands/Commands.hpp"
 #include "core/commands/HotkeySystem.hpp"
 #include "core/commands/LoopedCommand.hpp"
@@ -109,11 +110,16 @@ namespace YimMenu::Submenus
 
 		auto spawners            = std::make_shared<Category>("Spawners");
 		auto pedSpawnerGroup     = std::make_shared<Group>("Ped Spawner");
+		auto herbSpawnerGroup    = std::make_shared<Group>("Herb Spawner");
 		auto vehicleSpawnerGroup = std::make_shared<Group>("Vehicle Spawner");
 		auto trainSpawnerGroup   = std::make_shared<Group>("Train Spawner");
 
 		pedSpawnerGroup->AddItem(std::make_shared<ImGuiItem>([] {
 			RenderPedSpawnerMenu();
+		}));
+
+		herbSpawnerGroup->AddItem(std::make_shared<ImGuiItem>([] {
+			RenderHerbSpawnerMenu();
 		}));
 
 		vehicleSpawnerGroup->AddItem(std::make_shared<ImGuiItem>([] {
@@ -125,6 +131,7 @@ namespace YimMenu::Submenus
 		}));
 
 		spawners->AddItem(pedSpawnerGroup);
+		spawners->AddItem(herbSpawnerGroup);
 		spawners->AddItem(vehicleSpawnerGroup);
 		spawners->AddItem(trainSpawnerGroup);
 
