@@ -7,8 +7,7 @@
 
 namespace YimMenu::HerbSpawner
 {
-	bool isTreeOrchid(Hash asset)
-	{
+	bool isTreeOrchid(Hash asset){
 		switch (asset)
 		{
 		case "COMPOSITE_LOOTABLE_ORCHID_LADY_NIGHT_DEF"_J:
@@ -21,8 +20,7 @@ namespace YimMenu::HerbSpawner
 		}
 	}
 
-	bool SpawnHerbComposite(Hash asset)
-	{
+	bool SpawnHerbComposite(Hash asset){
 		auto ped = Self::GetPed();
 
 		if (!ped)
@@ -30,16 +28,14 @@ namespace YimMenu::HerbSpawner
 
 		TASK::_REQUEST_HERB_COMPOSITE_ASSET(asset);
 
-		for (int i = 0; i < 100; ++i)
-		{
+		for (int i = 0; i < 100; ++i){
 			if (TASK::ARE_COMPOSITE_LOOTABLE_ENTITY_DEF_ASSETS_LOADED(asset))
 				break;
 
 			ScriptMgr::Yield(10ms);
 		}
 
-		if (!TASK::ARE_COMPOSITE_LOOTABLE_ENTITY_DEF_ASSETS_LOADED(asset))
-		{
+		if (!TASK::ARE_COMPOSITE_LOOTABLE_ENTITY_DEF_ASSETS_LOADED(asset)){
 			LOG(INFO) << "Timed out loading herb composite asset.";
 			return false;
 		}
