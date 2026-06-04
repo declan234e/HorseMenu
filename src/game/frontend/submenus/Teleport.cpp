@@ -81,8 +81,8 @@ namespace YimMenu::Submenus
 					teleportLocation.y     = coords.y;
 					teleportLocation.z     = coords.z;
 					teleportLocation.yaw   = ENTITY::GET_ENTITY_HEADING(teleportEntity.GetHandle());
-					teleportLocation.pitch = CAM::GET_GAMEPLAY_CAM_RELATIVE_PITCH();
-					teleportLocation.roll  = CAM::GET_GAMEPLAY_CAM_RELATIVE_HEADING();
+					teleportLocation.pitch = CAMERA::GET_GAMEPLAY_CAM_RELATIVE_PITCH();
+					teleportLocation.roll  = CAMERA::GET_GAMEPLAY_CAM_RELATIVE_HEADING();
 					SavedLocations::SaveNewLocation(category, teleportLocation);
 				}
 			});

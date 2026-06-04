@@ -168,7 +168,7 @@ namespace YimMenu::Submenus
 				FiberPool::Push([] {
 					auto hash = Joaat(s_SelectedNewScriptName);
 
-					if (!SCRIPTS::DOES_SCRIPT_WITH_NAME_HASH_EXIST(hash))
+					if (!SCRIPT::DOES_SCRIPT_WITH_NAME_HASH_EXIST(hash))
 					{
 						return;
 					}
@@ -178,14 +178,14 @@ namespace YimMenu::Submenus
 						return;
 					}
 
-					while (!SCRIPTS::HAS_SCRIPT_WITH_NAME_HASH_LOADED(hash))
+					while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(hash))
 					{
-						SCRIPTS::REQUEST_SCRIPT_WITH_NAME_HASH(hash);
+						SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(hash);
 						ScriptMgr::Yield();
 					}
 
-					SCRIPTS::START_NEW_SCRIPT_WITH_NAME_HASH(hash, s_SelectedStackSize);
-					SCRIPTS::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
+					SCRIPT::START_NEW_SCRIPT_WITH_NAME_HASH(hash, s_SelectedStackSize);
+					SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
 
 					UpdateFreeStackSizeCount();
 				});

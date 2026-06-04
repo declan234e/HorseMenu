@@ -53,7 +53,7 @@ namespace YimMenu::Scripts
 		if (auto thread = FindScriptThread("net_main_offline"_J))
 		{
 			RunAsScript(thread, [data, count, metadataIndex, &bits] {
-				SCRIPTS::TRIGGER_SCRIPT_EVENT(1, data, count, metadataIndex, &bits);
+				SCRIPT::TRIGGER_SCRIPT_EVENT(1, data, count, metadataIndex, &bits);
 			});
 		}
 	}
@@ -98,14 +98,14 @@ namespace YimMenu::Scripts
 
 	bool RequestScript(joaat_t script)
 	{
-		if (!SCRIPTS::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script))
+		if (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script))
 		{
-			SCRIPTS::REQUEST_SCRIPT_WITH_NAME_HASH(script);
-			for (int i = 0; i < 150 && !SCRIPTS::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script); i++)
+			SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(script);
+			for (int i = 0; i < 150 && !SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script); i++)
 				ScriptMgr::Yield(10ms);
 		}
 
-		if (SCRIPTS::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script))
+		if (SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(script))
 			return true;
 		
 		return false;

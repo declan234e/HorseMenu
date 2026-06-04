@@ -16,7 +16,7 @@ namespace YimMenu
 
 	void MapEntity::DeleteBlip()
 	{
-		MAP::_0x01B928CA2E198B01(m_Blip);
+		MAP::_CLEAR_BLIP(m_Blip);
 		MAP::REMOVE_BLIP(&m_Blip);
 	}
 

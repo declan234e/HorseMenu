@@ -55,7 +55,7 @@ namespace YimMenu::HerbSpawner
 		
 		int compositeId = TASK::_CREATE_HERB_COMPOSITES(asset, pos.x, pos.y, pos.z, headingRadians, groundSetting, &extraData, -1);
 
-		LOG(INFO) << "Created herb composite id: " << compositeId;
+		//LOG(INFO) << "Created herb composite id: " << compositeId;
 
 		return compositeId != 0;
 	}

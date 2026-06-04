@@ -26,7 +26,7 @@ namespace YimMenu::Features
 
 				if (_SuperDriveDirectional.GetState())
 				{
-					Vector3 cam_rot = CAM::GET_GAMEPLAY_CAM_ROT(2);
+					Vector3 cam_rot = CAMERA::GET_GAMEPLAY_CAM_ROT(2);
 					direction       = Math::RotationToDirection(cam_rot);
 				}
 				else

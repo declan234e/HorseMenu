@@ -63,7 +63,9 @@ class NativeFunc:
 def load_natives_data():
     global natives
 
-    data = json.load(open("natives.json"))
+    with open("natives.json", encoding="utf-8-sig") as file: 
+        data = json.load(file)
+
     for ns, natives_list in data.items():
         natives[ns] = []
         for hash_str, native_data in natives_list.items():

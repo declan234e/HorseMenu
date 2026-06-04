@@ -334,7 +334,7 @@ namespace YimMenu
 
 	void ESP::Draw()
 	{
-		if (!NativeInvoker::AreHandlersCached() || CAM::IS_SCREEN_FADED_OUT())
+		if (!NativeInvoker::AreHandlersCached() || CAMERA::IS_SCREEN_FADED_OUT())
 			return;
 
 		if (const auto drawList = ImGui::GetBackgroundDrawList())

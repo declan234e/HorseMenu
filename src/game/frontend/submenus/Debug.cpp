@@ -50,7 +50,7 @@ namespace YimMenu::Submenus
 			if (ImGui::Button("Bail to Loading Screen"))
 			{
 				FiberPool::Push([] {
-					SCRIPTS::BAIL_TO_LANDING_PAGE(0);
+					SCRIPT::BAIL_TO_LANDING_PAGE(0);
 				});
 			}
 

@@ -35,17 +35,17 @@ namespace YimMenu
 		if (m_Camera)
 			return;
 
-		m_Camera       = CAM::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", 0);
-		m_Position     = CAM::GET_GAMEPLAY_CAM_COORD();
-		m_Rotation     = CAM::GET_GAMEPLAY_CAM_ROT(2);
+		m_Camera       = CAMERA::CREATE_CAM("DEFAULT_SCRIPTED_CAMERA", 0);
+		m_Position     = CAMERA::GET_GAMEPLAY_CAM_COORD();
+		m_Rotation     = CAMERA::GET_GAMEPLAY_CAM_ROT(2);
 		m_PanAcceleration = 0.0f;
 		m_ZoomAcceleration = 0.0f;
 		m_Speed        = 0.02f;
 
-		CAM::SET_CAM_COORD(m_Camera, m_Position.x, m_Position.y, m_Position.z);
-		CAM::SET_CAM_ROT(m_Camera, m_Rotation.x, m_Rotation.y, m_Rotation.z, 2);
-		CAM::SET_CAM_ACTIVE(m_Camera, true);
-		CAM::RENDER_SCRIPT_CAMS(true, true, 500, true, true, 0);
+		CAMERA::SET_CAM_COORD(m_Camera, m_Position.x, m_Position.y, m_Position.z);
+		CAMERA::SET_CAM_ROT(m_Camera, m_Rotation.x, m_Rotation.y, m_Rotation.z, 2);
+		CAMERA::SET_CAM_ACTIVE(m_Camera, true);
+		CAMERA::RENDER_SCRIPT_CAMS(true, true, 500, true, true, 0);
 
 		m_OldPlayerPos = Self::GetPed().GetPosition();
 		TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Self::GetPed().GetHandle(), true);
@@ -55,9 +55,9 @@ namespace YimMenu
 	{
 		Self::GetPed().SetPosition(m_OldPlayerPos);
 		TASK::TASK_SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Self::GetPed().GetHandle(), false);
-		CAM::SET_CAM_ACTIVE(m_Camera, false);
-		CAM::RENDER_SCRIPT_CAMS(false, true, 500, true, true, 0);
-		CAM::DESTROY_CAM(m_Camera, false);
+		CAMERA::SET_CAM_ACTIVE(m_Camera, false);
+		CAMERA::RENDER_SCRIPT_CAMS(false, true, 500, true, true, 0);
+		CAMERA::DESTROY_CAM(m_Camera, false);
 		m_Camera = 0;
 	}
 
@@ -65,7 +65,7 @@ namespace YimMenu
 	{
 		Vector3 PosChange{};
 
-		Vector3 rot = CAM::GET_CAM_ROT(m_Camera, 2);
+		Vector3 rot = CAMERA::GET_CAM_ROT(m_Camera, 2);
 		auto pitch = Math::DegToRad(rot.x);
 		float yaw   = Math::DegToRad(rot.z);
 
@@ -122,10 +122,10 @@ namespace YimMenu
 		m_Position.y += (PosChange.x * sin(yaw) + PosChange.y * cos(yaw)) * m_PanAcceleration * additional_accel;
 		m_Position.z += PosChange.z * m_PanAcceleration;
 
-		CAM::SET_CAM_COORD(m_Camera, m_Position.x, m_Position.y, m_Position.z);
+		CAMERA::SET_CAM_COORD(m_Camera, m_Position.x, m_Position.y, m_Position.z);
 		Self::GetPed().SetPosition(m_Position);
-		m_Rotation = CAM::GET_GAMEPLAY_CAM_ROT(2);
-		CAM::SET_CAM_ROT(m_Camera, m_Rotation.x, m_Rotation.y, m_Rotation.z, 2);
+		m_Rotation = CAMERA::GET_GAMEPLAY_CAM_ROT(2);
+		CAMERA::SET_CAM_ROT(m_Camera, m_Rotation.x, m_Rotation.y, m_Rotation.z, 2);
 		Self::GetPed().SetRotation(m_Rotation);
 	}
 

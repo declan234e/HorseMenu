@@ -12,7 +12,7 @@ namespace YimMenu::Features
 		{
 			if (TASK::GET_IS_TASK_ACTIVE(Self::GetPed().GetHandle(), 628))
 			{
-				if (!SCRIPTS::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH("fishing_core"_J))
+				if (!SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH("fishing_core"_J))
 				{
 					TASK::CLEAR_PED_TASKS_IMMEDIATELY(Self::GetPed().GetHandle(), TRUE, TRUE);
 				}

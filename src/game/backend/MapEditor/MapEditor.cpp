@@ -86,7 +86,7 @@ namespace YimMenu
 			NativeHooks::AddHook(NativeHooks::ALL_SCRIPTS, NativeIndex::UI_STATE_MACHINE_CREATE, [](rage::scrNativeCallContext* ctx) {
 				if (MapEditor::IsOpen())
 				{
-					LOGF(VERBOSE, "Blocked UI_STATE_MACHINE_CREATE from 0x{:X}", SCRIPTS::GET_HASH_OF_THIS_SCRIPT_NAME());
+					LOGF(VERBOSE, "Blocked UI_STATE_MACHINE_CREATE from 0x{:X}", SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME());
 					ctx->SetReturnValue(TRUE);
 				}
 				else

@@ -463,7 +463,7 @@ namespace YimMenu::Submenus
 
 	static void CREATE_PED(rage::scrNativeCallContext* ctx)
 	{
-		auto override = GetOverridePed(SceneTypeFromScript(SCRIPTS::GET_HASH_OF_THIS_SCRIPT_NAME()), ctx->GetArg<Hash>(0));
+		auto override = GetOverridePed(SceneTypeFromScript(SCRIPT::GET_HASH_OF_THIS_SCRIPT_NAME()), ctx->GetArg<Hash>(0));
 		if (override)
 		{
 			ctx->SetReturnValue(override.GetHandle());
@@ -556,7 +556,7 @@ namespace YimMenu::Submenus
 	static void ShutdownShow()
 	{
 		UnloadSet(g_RunningSceneType);
-		SCRIPTS::TERMINATE_THREAD(g_RunningSceneScriptID);
+		SCRIPT::TERMINATE_THREAD(g_RunningSceneScriptID);
 		MISC::CLEAR_AREA(2546.5646f, -1301.4119f, 48.3564f, 500.0f, -1); // clear stage area
 		for (auto& entity : g_ShowEntities)
 		{
@@ -720,9 +720,9 @@ namespace YimMenu::Submenus
 					return; // rare case, but whatever
 				}
 
-				while (!SCRIPTS::HAS_SCRIPT_WITH_NAME_HASH_LOADED(hash))
+				while (!SCRIPT::HAS_SCRIPT_WITH_NAME_HASH_LOADED(hash))
 				{
-					SCRIPTS::REQUEST_SCRIPT_WITH_NAME_HASH(hash);
+					SCRIPT::REQUEST_SCRIPT_WITH_NAME_HASH(hash);
 					ScriptMgr::Yield();
 				}
 
@@ -743,16 +743,16 @@ namespace YimMenu::Submenus
 					start_parameters.ShowIndex = g_ScriptSceneIds[static_cast<int>(g_SelectedSceneType)];
 					start_parameters.DisableLightingControls = FALSE;
 
-					g_RunningSceneScriptID = SCRIPTS::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(hash, &start_parameters, sizeof(start_parameters) / sizeof(uint64_t), 7000);
+					g_RunningSceneScriptID = SCRIPT::START_NEW_SCRIPT_WITH_NAME_HASH_AND_ARGS(hash, &start_parameters, sizeof(start_parameters) / sizeof(uint64_t), 7000);
 				}
 				else
 				{
-					g_RunningSceneScriptID = SCRIPTS::START_NEW_SCRIPT_WITH_NAME_HASH(hash, 7000);
+					g_RunningSceneScriptID = SCRIPT::START_NEW_SCRIPT_WITH_NAME_HASH(hash, 7000);
 				}
 
 				g_RunningSceneType = g_SelectedSceneType;
 				g_SetReady = false;
-				SCRIPTS::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
+				SCRIPT::SET_SCRIPT_WITH_NAME_HASH_AS_NO_LONGER_NEEDED(hash);
 			});
 		}
 		ImGui::EndDisabled();

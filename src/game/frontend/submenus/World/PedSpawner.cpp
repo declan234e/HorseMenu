@@ -22,7 +22,7 @@ namespace YimMenu::Submenus
 		}
 		else
 		{
-			ctx->SetReturnValue<int>(SCRIPTS::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(ctx->GetArg<int>(0)));
+			ctx->SetReturnValue<int>(SCRIPT::GET_NUMBER_OF_THREADS_RUNNING_THE_SCRIPT_WITH_THIS_HASH(ctx->GetArg<int>(0)));
 		}
 	}
 

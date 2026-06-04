@@ -212,15 +212,15 @@ namespace YimMenu::NativeUI
 
 	void FadeScreenOut(int dur_in_ms)
 	{
-		CAM::DO_SCREEN_FADE_OUT(dur_in_ms);
+		CAMERA::DO_SCREEN_FADE_OUT(dur_in_ms);
 	}
 
 	void FadeScreenIn(int dur_in_ms)
 	{
-		if (CAM::IS_SCREEN_FADED_IN())
+		if (CAMERA::IS_SCREEN_FADED_IN())
 			FadeScreenOut(0);
 
-		CAM::DO_SCREEN_FADE_IN(dur_in_ms);
+		CAMERA::DO_SCREEN_FADE_IN(dur_in_ms);
 	}
 
 	void DisableBountyBoard()
