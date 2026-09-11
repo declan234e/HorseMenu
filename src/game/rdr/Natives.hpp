@@ -536,7 +536,7 @@ enum class NativeIndex
 	SET_SCRIPTED_CAMERA_IS_FIRST_PERSON_THIS_FRAME = 529,
 	_IS_IN_FULL_FIRST_PERSON_MODE = 530,
 	SHAKE_GAMEPLAY_CAM = 531,
-	_0xC3E9E5D4F413B773 = 532,
+	_RESTART_GAMEPLAY_CAM_SHAKE_WITH_NAME = 532,
 	IS_GAMEPLAY_CAM_SHAKING = 533,
 	_0x0060B31968E60E41 = 534,
 	SET_GAMEPLAY_CAM_SHAKE_AMPLITUDE = 535,
@@ -1005,13 +1005,13 @@ enum class NativeIndex
 	HAS_ENTITY_BEEN_DAMAGED_BY_ANY_VEHICLE = 998,
 	HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY = 999,
 	_0x3EC28DA1FFAC9DDD = 1000,
-	_0xAF72EC7E1B54539B = 1001,
+	_GET_LAST_ENTITY_TO_DAMAGE_ENTITY = 1001,
 	HAS_ENTITY_CLEAR_LOS_TO_ENTITY = 1002,
 	HAS_ENTITY_CLEAR_LOS_TO_COORD = 1003,
 	HAS_ENTITY_CLEAR_LOS_TO_ENTITY_IN_FRONT = 1004,
 	HAS_ENTITY_COLLIDED_WITH_ANYTHING = 1005,
-	_0x6D58167F62238284 = 1006,
-	_0xDFC2B226D56D85F6 = 1007,
+	_GET_COLLISION_INTENSITY = 1006,
+	_GET_ENTITY_COLLISION_INTENSITY = 1007,
 	GET_ANIM_DURATION = 1008,
 	GET_ENTITY_ATTACHED_TO = 1009,
 	GET_ENTITY_COORDS = 1010,
@@ -1049,7 +1049,7 @@ enum class NativeIndex
 	GET_VEHICLE_INDEX_FROM_ENTITY_INDEX = 1042,
 	GET_WORLD_POSITION_OF_ENTITY_BONE = 1043,
 	_0x5E214112806591EA = 1044,
-	_0x3AB3A77672F6473F = 1045,
+	_GET_HEADING_OF_ENTITY_BONE = 1045,
 	GET_NEAREST_PLAYER_TO_ENTITY = 1046,
 	GET_NEAREST_PLAYER_TO_ENTITY_ON_TEAM = 1047,
 	GET_NEAREST_PARTICIPANT_TO_ENTITY = 1048,
@@ -1093,7 +1093,7 @@ enum class NativeIndex
 	IS_ENTITY_VISIBLE = 1086,
 	_0xFF9965C47FA404DA = 1087,
 	IS_ENTITY_VISIBLE_TO_SCRIPT = 1088,
-	_0x3F08C6163A4AB1D6 = 1089,
+	_REQUEST_ENTITY_VISIBILITY_TRACKING = 1089,
 	_0x0DB41D59E0F1502B = 1090,
 	_IS_TRACKED_ENTITY_VISIBLE = 1091,
 	IS_ENTITY_OCCLUDED = 1092,
@@ -1116,7 +1116,7 @@ enum class NativeIndex
 	_IS_CARRIABLE_MODEL = 1109,
 	_GET_CARRIABLE_FROM_ENTITY = 1110,
 	_SET_ENTITY_CARCASS_TYPE = 1111,
-	_0x2A77EF9BEC8518F4 = 1112,
+	_GET_CARCASS_FROM_PELT = 1112,
 	_DELETE_CARRIABLE = 1113,
 	_IS_ENTITY_FULLY_LOOTED = 1114,
 	_SET_ENTITY_FULLY_LOOTED = 1115,
@@ -1128,15 +1128,15 @@ enum class NativeIndex
 	_SET_ENTITY_CARRYING_FLAG = 1121,
 	_0xC3ABCFBC7D74AFA5 = 1122,
 	_0x371D179701D9C082 = 1123,
-	_0xA48E4801DEBDF7E4 = 1124,
+	_SET_CARRIABLE_PICKUP_LIGHT = 1124,
 	_GET_IS_CARRIABLE_PELT = 1125,
 	_0xF59FDE7B4D31A630 = 1126,
-	_0x120376C23F019C6C = 1127,
+	_GET_ENTITY_ALBEDO = 1127,
 	_0x5744562E973E33CD = 1128,
-	_0xDD03FC2089AD093C = 1129,
+	_SET_ANIMAL_PELT_TEXTURE = 1129,
 	_0xB16C780C51E51E2B = 1130,
 	_0xEF259AA1E097E0AD = 1131,
-	_0xBD94CECFB2D65119 = 1132,
+	_SET_AUTO_PICKUP = 1132,
 	_SET_ENTITY_CUSTOM_PICKUP_RADIUS = 1133,
 	_0xE75EEA8DB59A9F39 = 1134,
 	_0x188736456D1DEDE6 = 1135,
@@ -1146,7 +1146,7 @@ enum class NativeIndex
 	ATTACH_ENTITY_TO_ENTITY = 1139,
 	ATTACH_ENTITY_TO_ENTITY_PHYSICALLY = 1140,
 	_ATTACH_ENTITY_TO_COORDS_PHYSICALLY = 1141,
-	_0x16908E859C3AB698 = 1142,
+	_SET_ENTITY_ATTACHED_OFFSET = 1142,
 	GET_ENTITY_BONE_INDEX_BY_NAME = 1143,
 	CLEAR_ENTITY_LAST_DAMAGE_ENTITY = 1144,
 	DELETE_ENTITY = 1145,
@@ -1162,8 +1162,8 @@ enum class NativeIndex
 	SET_OBJECT_AS_NO_LONGER_NEEDED = 1155,
 	_0x20FAEE47427A4497 = 1156,
 	_DOES_THREAD_OWN_THIS_ENTITY = 1157,
-	_0x56E0735D6273B227 = 1158,
-	_0xC0EDEF16D90661EE = 1159,
+	_SET_ENTITY_DISABLE_FIRE = 1158,
+	_SET_ENTITY_ANIM_AGE = 1159,
 	_0x0FD7D7C232876E72 = 1160,
 	_0x0939E773925C4719 = 1161,
 	SET_ENTITY_CAN_BE_DAMAGED = 1162,
@@ -1182,12 +1182,12 @@ enum class NativeIndex
 	_SET_ENTITY_COORDS_AND_HEADING_NO_OFFSET = 1175,
 	SET_ENTITY_HEALTH = 1176,
 	SET_ENTITY_INVINCIBLE = 1177,
-	_0xAF7F3099B9FEB535 = 1178,
+	_SET_ENTITY_LOCKON_POINT_OFFSET = 1178,
 	SET_ENTITY_IS_TARGET_PRIORITY = 1179,
 	_0xB38A29CCD5447783 = 1180,
 	_SET_ENTITY_THREAT_TIER = 1181,
 	_GET_ENTITY_THREAT_TIER = 1182,
-	_0x2D40BCBFE9305DEA = 1183,
+	_SET_ENTITY_LIGHTS_OFF = 1183,
 	_SET_ENTITY_LIGHTS_ENABLED = 1184,
 	SET_ENTITY_LOAD_COLLISION_FLAG = 1185,
 	HAS_COLLISION_LOADED_AROUND_ENTITY = 1186,
@@ -1198,7 +1198,7 @@ enum class NativeIndex
 	_GET_ENTITY_PROOFS = 1191,
 	SET_ENTITY_QUATERNION = 1192,
 	SET_ENTITY_ROTATION = 1193,
-	_0xD45BB89B53FC0CFD = 1194,
+	_SET_ENTITY_ROTATION_PARALLEL_TO_LINE = 1194,
 	SET_ENTITY_VISIBLE = 1195,
 	_0x80FDEB3A9E9AA578 = 1196,
 	_0x9C6906EF8CB20C5F = 1197,
@@ -1219,7 +1219,7 @@ enum class NativeIndex
 	CREATE_MODEL_HIDE = 1212,
 	CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS = 1213,
 	REMOVE_MODEL_HIDE = 1214,
-	_0xD4636C2EDB0DEA8A = 1215,
+	_IS_BATCH_MODEL = 1215,
 	CREATE_FORCED_OBJECT = 1216,
 	REMOVE_FORCED_OBJECT = 1217,
 	SET_ENTITY_NO_COLLISION_ENTITY = 1218,
@@ -1231,8 +1231,8 @@ enum class NativeIndex
 	GET_MATCHING_ENTITIES = 1224,
 	_GET_ENTITIES_IN_VOLUME = 1225,
 	_SEARCH_BUILDING_POOL_FOR_ENTITY_WITH_THIS_MODEL = 1226,
-	_0xC2E71D7E0A7B4C89 = 1227,
-	_0x6C31B06E91518269 = 1228,
+	_IS_TRAIN_INTERIOR_LOADED = 1227,
+	_PRELOAD_ENTITY_INTERIOR = 1228,
 	_FORCE_TRAIN_WAGON_POPULATION = 1229,
 	_GET_ENTITY_BY_DOORHASH = 1230,
 	FIND_ANIM_EVENT_PHASE = 1231,
@@ -1254,13 +1254,13 @@ enum class NativeIndex
 	_0xC76E94A78127412B = 1247,
 	_0x7F20092547B4DDEA = 1248,
 	_0xF41E2979D5BC5370 = 1249,
-	_0xAAACB74442C1BED3 = 1250,
+	_PIN_MAP_ENTITY = 1250,
 	PIN_CLOSEST_MAP_ENTITY = 1251,
 	_UNPIN_MAP_ENTITY = 1252,
 	IS_MAP_ENTITY_PINNED = 1253,
 	_GET_PINNED_MAP_ENTITY = 1254,
-	_0xEAB3D91D30A344F1 = 1255,
-	_0x37CEB637BA3B1A47 = 1256,
+	_ENABLE_STAIRS_STEP_FOR_VOLUME = 1255,
+	_DISABLE_STAIRS_STEP_FOR_VOLUME = 1256,
 	_0x350E9211074955AF = 1257,
 	_0x898586729DB5221D = 1258,
 	_0xE9E7A0BAC7F57746 = 1259,
@@ -1466,10 +1466,10 @@ enum class NativeIndex
 	GET_TOGGLE_PAUSED_RENDERPHASES_STATUS = 1459,
 	RESET_PAUSED_RENDERPHASES = 1460,
 	SET_HIDOF_OVERRIDE = 1461,
-	_0x21F00E08CBB5F37B = 1462,
-	_0x5AC6E0FA028369DE = 1463,
+	_SET_MASK_OVERLAY = 1462,
+	_RESET_MASK_OVERLAY = 1463,
 	_0xEC3D8C228FE553D7 = 1464,
-	_0xF5793BB386E1FF9C = 1465,
+	_SET_PHOTO_MODE_AO_ENHANCED = 1465,
 	_SET_PHOTO_MODE_EXPOSURE_LOCKED = 1466,
 	_CHANGE_PHOTO_MODE_EXPOSURE = 1467,
 	_GET_PHOTO_MODE_EXPOSURE = 1468,
@@ -1588,7 +1588,7 @@ enum class NativeIndex
 	_ANIMPOSTFX_SET_POSTFX_COLOR = 1581,
 	_0xB958D97A0DFAA0C2 = 1582,
 	_0xA201A3D0AC087C37 = 1583,
-	_0xFBF161FCFEC8589E = 1584,
+	_ANIMPOSTFX_HAS_EVENT_TRIGGERED = 1584,
 	_ANIMPOSTFX_GET_STACKHASH = 1585,
 	_ANIMPOSTFX_PRELOAD_POSTFX_BY_STACKHASH = 1586,
 	ANIMPOSTFX_IS_PRELOADING_BY_STACKHASH = 1587,
@@ -1878,10 +1878,10 @@ enum class NativeIndex
 	_MP_GAMER_TAG_ENABLE_REVIVE_TOP_ICON = 1871,
 	_MP_GAMER_TAG_DISABLE_REVIVE_TOP_ICON = 1872,
 	_INVERSE_KINEMATICS_REQUEST_LOOK_AT = 1873,
-	_0x0B9F7A01EC50448D = 1874,
+	_INVERSE_KINEMATICS_POINT_AT = 1874,
 	_INVERSE_KINEMATICS_SET_DISABLED_FOR_PED = 1875,
-	_0x6098139150DCC745 = 1876,
-	_0x873C792E07A32C8B = 1877,
+	_INVERSE_KINEMATICS_IS_ACTIVE = 1876,
+	_IK_SET_FOCUS_ENTITY_FOR_PED = 1877,
 	SET_MOUSE_CURSOR_THIS_FRAME = 1878,
 	SET_MOUSE_CURSOR_STYLE = 1879,
 	_SET_ALLOW_FIRST_PERSON_MOUSE_CAMERA_MOVEMENT = 1880,
@@ -2039,9 +2039,9 @@ enum class NativeIndex
 	_0x799FCD53358ED5FA = 2032,
 	_0xC4146375D8A0B374 = 2033,
 	_ITEMDATABASE_GET_BUNDLE_ACQUIRE_COST_MODIFIERS = 2034,
-	_0x7A35A72A692BE9DB = 2035,
-	_0x3A0B667ABFF87F6E = 2036,
-	_0x388088BFF3681189 = 2037,
+	_ITEMDATABASE_GET_BUNDLE_ACQUIRE_COSTS_COUNT = 2035,
+	_ITEMDATABASE_GET_BUNDLE_ACQUIRE_COST = 2036,
+	_ITEMDATABASE_GET_BUNDLE_ACQUIRE_COSTS_COUNT_FROM_COST = 2037,
 	_ITEMDATABASE_FILLOUT_BUNDLE = 2038,
 	_ITEMDATABASE_IS_SHOP_KEY_VALID = 2039,
 	_ITEMDATABASE_GET_SHOP_INVENTORIES_ITEMS_COUNT = 2040,
@@ -2070,9 +2070,9 @@ enum class NativeIndex
 	_ITEMDATABASE_FILLOUT_MODIFIER = 2063,
 	_ITEMDATABASE_GET_PRIORITY_ACCESS_AWARD = 2064,
 	_ITEMDATABASE_GET_AWARD_ITEM_COUNT = 2065,
-	_0x48229CE0C7938237 = 2066,
+	_ITEMDATABASE_GET_AWARD_UNLOCK_FLAG_COUNT = 2066,
 	_ITEMDATABASE_FILLOUT_AWARD_ITEM_INFO = 2067,
-	_0x8D029948CA29409B = 2068,
+	_ITEMDATABASE_FILLOUT_AWARD_UNLOCK_FLAG = 2068,
 	_ITEMDATABASE_GET_AWARD_COST_MODIFIERS = 2069,
 	_ITEMDATABASE_GET_AWARD_INFO = 2070,
 	_ITEMDATABASE_DOES_ITEM_HAVE_TAG = 2071,
@@ -2084,7 +2084,7 @@ enum class NativeIndex
 	_ITEMDATABASE_LOCALIZATION_GET_TYPE = 2077,
 	_ITEMDATABASE_LOCALIZATION_GET_VALUE = 2078,
 	_ITEMDATABASE_GET_ITEM_PATHSET = 2079,
-	_0xAA29A5F13B2C20B2 = 2080,
+	_ITEMDATABASE_GET_CATALOG_ITEM_CATEGORY_PATHSET = 2080,
 	CREATE_ITEMSET = 2081,
 	DESTROY_ITEMSET = 2082,
 	IS_ITEMSET_VALID = 2083,
@@ -2168,7 +2168,7 @@ enum class NativeIndex
 	_0x9C8A2BF37E966464 = 2161,
 	_0x9D5C9A5A3321B128 = 2162,
 	_0x0F230DE0DDBE3649 = 2163,
-	_0x9945A3E2528A02E8 = 2164,
+	_HAS_PLAYER_BEEN_FOUND_BY_LAW_ACTIVE_SEARCH = 2164,
 	_GET_TIME_SINCE_LAST_SEEN_BY_LAW = 2165,
 	_0x9B4C564BFA7CFF37 = 2166,
 	_SET_ALLOW_DISABLED_LAW_RESPONSES = 2167,
@@ -2181,10 +2181,10 @@ enum class NativeIndex
 	_PAUSE_BOUNTY_HUNTER_COOLDOWN = 2174,
 	_0xE9AC8466ABE484BB = 2175,
 	_0x40851BCC33ACD9AB = 2176,
-	_0xF46108C50A22B029 = 2177,
-	_0x7803436E68C32B26 = 2178,
-	_0xC310239ACCCF5579 = 2179,
-	_0x29CD4896ECB66C12 = 2180,
+	_IS_PLAYER_SEARCHED = 2177,
+	_FORCE_PLAYER_SEARCH = 2178,
+	_FORCE_PLAYER_SEARCH_THIS_FRAME = 2179,
+	_STOP_PLAYER_SEARCH = 2180,
 	_0xE94B5E938619712E = 2181,
 	_0x7FC667F6DDFBCDCC = 2182,
 	_0x9C5BD8C562565CE6 = 2183,
@@ -2490,9 +2490,9 @@ enum class NativeIndex
 	IS_BULLET_IN_BOX = 2483,
 	HAS_BULLET_IMPACTED_IN_AREA = 2484,
 	HAS_BULLET_IMPACTED_IN_BOX = 2485,
-	_0x7A76104CC2CC69E8 = 2486,
-	_0xDC416CA762BC4F43 = 2487,
-	_0x970339EFA4FDE518 = 2488,
+	_HAS_BULLET_IMPACTED_ENTITY = 2486,
+	_GET_NUMBER_OF_BULLETS_IN_AREA = 2487,
+	_GET_NUMBER_OF_BULLETS_IMPACTED_ENTITY = 2488,
 	IS_ORBIS_VERSION = 2489,
 	IS_DURANGO_VERSION = 2490,
 	IS_PC_VERSION = 2491,
@@ -3270,7 +3270,7 @@ enum class NativeIndex
 	_SET_OBJECT_TARGETTABLE_2 = 3263,
 	_SET_OBJECT_TARGETTABLE_FOCUS = 3264,
 	_0xF6E88489B4E6EBE5 = 3265,
-	_0xE157A8A336C7F04A = 3266,
+	_SET_OBJECT_MARKABLE_IN_DEADEYE = 3266,
 	_0x46CBCF0E98A4E156 = 3267,
 	GET_CLOSEST_OBJECT_OF_TYPE = 3268,
 	HAS_OBJECT_BEEN_BROKEN = 3269,
@@ -3283,32 +3283,32 @@ enum class NativeIndex
 	DOOR_SYSTEM_GET_DOOR_STATE = 3276,
 	DOOR_SYSTEM_SET_AUTOMATIC_RATE = 3277,
 	DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE = 3278,
-	_0xB3B1546D23DF8DE1 = 3279,
+	_DOOR_SYSTEM_SWING_OPEN = 3279,
 	DOOR_SYSTEM_SET_OPEN_RATIO = 3280,
 	_0x3A77DAE8B4FD7586 = 3281,
 	_DOOR_SYSTEM_SET_ABLE_TO_CHANGE_OPEN_RATIO_WHILE_LOCKED = 3282,
 	_IS_DOOR_REGISTERED_WITH_OWNER = 3283,
 	_DOOR_SYSTEM_CHANGE_SCRIPT_OWNER = 3284,
 	_DOOR_SYSTEM_GET_AUTOMATIC_RATE = 3285,
-	_0x6E2AA80BB0C03728 = 3286,
+	_DOOR_SYSTEM_CHECK_ACTION_FLAG = 3286,
 	_DOOR_SYSTEM_SET_AUTOMATIC_STATE = 3287,
 	DOOR_SYSTEM_GET_OPEN_RATIO = 3288,
 	_0x7F458B543006C8FE = 3289,
 	_0xACD4F9831DFAD7F5 = 3290,
 	_0x0C0A373D181BF900 = 3291,
-	_0xA93F925F1942E434 = 3292,
-	_0x4D8611DFE1126478 = 3293,
+	_SET_DOOR_KNOCKING_WHEN_LOCKED = 3292,
+	_GET_DOOR_KNOCKING_WHEN_LOCKED = 3293,
 	_0x57C242543B7B8FB9 = 3294,
 	_0x4AE07EBA3462C5D5 = 3295,
 	_0x22031584496CFB70 = 3296,
-	_0xC07B91B996C1DE89 = 3297,
+	_SET_DOOR_KICK_PROMPT_ENABLED = 3297,
 	IS_DOOR_REGISTERED_WITH_SYSTEM = 3298,
 	IS_DOOR_CLOSED = 3299,
-	_0x0943113E02322164 = 3300,
+	_CHECK_DOOR_ACTION_FLAG = 3300,
 	_0x614D0B4533F842D3 = 3301,
 	_DOOR_SYSTEM_FORCE_SHUT = 3302,
-	_0xEBA314768FB35D58 = 3303,
-	_0x5230BF34EB0EC645 = 3304,
+	_DOOR_SYSTEM_GET_FORCED_OPEN_PLAYER = 3303,
+	_DOOR_SYSTEM_CLEAR_FORCED_OPEN_PLAYER = 3304,
 	DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS = 3305,
 	IS_POINT_IN_ANGLED_AREA = 3306,
 	SET_OBJECT_ALLOW_LOW_LOD_BUOYANCY = 3307,
@@ -3318,10 +3318,10 @@ enum class NativeIndex
 	SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN = 3311,
 	BREAK_OBJECT_FRAGMENT_CHILD = 3312,
 	BREAK_ALL_OBJECT_FRAGMENT_BONES = 3313,
-	_0xAAACF33CBF9B990A = 3314,
+	_DAMAGE_OBJECT_FRAGMENT_BY_INDEX = 3314,
 	_DAMAGE_BONE_ON_PROP = 3315,
 	FIX_OBJECT_FRAGMENT = 3316,
-	_0x58DE624FA7FB0E7F = 3317,
+	_GET_OBJECT_FRAGMENT_COUNT = 3317,
 	_0x491439AEF410A2FC = 3318,
 	_SET_OBJECT_BREAK_SCALE = 3319,
 	_0xCEAB54F4632C6EF6 = 3320,
@@ -3335,7 +3335,7 @@ enum class NativeIndex
 	_SET_LIGHT_INTENSITY_FOR_OBJECT = 3328,
 	_SET_LIGHT_TRANSLUCENCY_FOR_OBJECT = 3329,
 	_SET_LIGHT_SCATTERING_DISABLED_FOR_OBJECT = 3330,
-	_0x7FCD49388BC9B775 = 3331,
+	_SET_OBJECT_LANTERN_LIGHT_DISABLED = 3331,
 	_0xFA99E8E575F2FEF8 = 3332,
 	GET_RAYFIRE_MAP_OBJECT = 3333,
 	SET_STATE_OF_RAYFIRE_MAP_OBJECT = 3334,
@@ -3372,7 +3372,7 @@ enum class NativeIndex
 	SET_PICKUP_NOT_LOOTABLE = 3365,
 	_0x1F5E07E14A86FAFC = 3366,
 	SET_TEAM_PICKUP_OBJECT = 3367,
-	_0x9F52AD67D1A91BAD = 3368,
+	_IS_PICKUP_PICKABLE_FOR_TEAM = 3368,
 	PREVENT_COLLECTION_OF_PORTABLE_PICKUP = 3369,
 	SET_PICKUP_GENERATION_RANGE_MULTIPLIER = 3370,
 	SET_PICKUP_UNCOLLECTABLE = 3371,
@@ -3708,11 +3708,11 @@ enum class NativeIndex
 	SET_PED_INJURED_ON_GROUND_BEHAVIOUR = 3701,
 	DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR = 3702,
 	_SET_STAGED_PED_FLAG = 3703,
-	_0xFA8C10DCE0706D43 = 3704,
+	_HAS_PED_KNOCKED_ON_DOOR = 3704,
 	_SET_PED_ANIMAL_DETECTION_MODIFIER = 3705,
-	_0x2BA9D7BF629F920C = 3706,
+	_GET_PED_SEEING_RANGE = 3706,
 	SET_PED_SEEING_RANGE = 3707,
-	_0x900CA00CE703E1E2 = 3708,
+	_GET_PED_HEARING_RANGE = 3708,
 	SET_PED_HEARING_RANGE = 3709,
 	SET_PED_VISUAL_FIELD_MIN_ANGLE = 3710,
 	SET_PED_VISUAL_FIELD_MAX_ANGLE = 3711,
@@ -3787,7 +3787,7 @@ enum class NativeIndex
 	_0x3ACCE14DFA6BA8C2 = 3780,
 	SET_PED_TO_INFORM_RESPECTED_FRIENDS = 3781,
 	_0x40C9155AF8BC13F3 = 3782,
-	_0xF4860514AD354226 = 3783,
+	_COUNT_PEDS_AWARE_OF_EVENT = 3783,
 	IS_PED_RESPONDING_TO_EVENT = 3784,
 	_0x5E9FAF6C513347B4 = 3785,
 	_0x326F7951EF0D7F75 = 3786,
@@ -3931,7 +3931,7 @@ enum class NativeIndex
 	KNOCK_OFF_PED_PROP = 3924,
 	SET_BLOCKING_OF_NON_TEMPORARY_EVENTS = 3925,
 	_GET_BLOCKING_OF_NON_TEMPORARY_EVENTS = 3926,
-	_0xC17A94CC8FC3C61A = 3927,
+	_SET_PED_RAGDOLL_BONE_SCALE = 3927,
 	_SET_PED_SCALE = 3928,
 	_0x134775B093AD5C38 = 3929,
 	_GET_PED_HEIGHT = 3930,
@@ -4086,8 +4086,8 @@ enum class NativeIndex
 	_SET_PED_CAN_BE_LASSOED = 4079,
 	SET_PED_COMBAT_MOVEMENT = 4080,
 	GET_PED_COMBAT_MOVEMENT = 4081,
-	_0x815C0074A1BC0D93 = 4082,
-	_0xFFDE295662405B25 = 4083,
+	_SET_PED_COMBAT_SPEED = 4082,
+	_GET_PED_COMBAT_SPEED = 4083,
 	SET_PED_COMBAT_ABILITY = 4084,
 	SET_PED_COMBAT_RANGE = 4085,
 	SET_PED_COMBAT_ATTRIBUTES = 4086,
@@ -4113,7 +4113,7 @@ enum class NativeIndex
 	_GET_PED_BRAWLING_STYLE = 4106,
 	_SET_PED_BRAWLING_STYLE = 4107,
 	_0x9D8DFE2DE9CB4DFC = 4108,
-	_0xC48AF420371C7407 = 4109,
+	_SET_PED_MELEE_ACTION = 4109,
 	_0x5EFA8A3D8A60D662 = 4110,
 	_0x242EDF85D4E87B65 = 4111,
 	_SET_PED_COMBAT_BEHAVIOUR = 4112,
@@ -4202,7 +4202,7 @@ enum class NativeIndex
 	_COMPUTE_SPEED_FOR_PED_MOVE_BLEND_RATIO = 4195,
 	_HORSE_AGITATE = 4196,
 	_0x413697EC260AABBF = 4197,
-	_0xCAC43D060099EA72 = 4198,
+	_HIDE_PED_REINS = 4198,
 	_0xC9151483CC06A414 = 4199,
 	_0xAD3330E3C3E98007 = 4200,
 	_0xB8E2D655E1D5BD39 = 4201,
@@ -4353,7 +4353,7 @@ enum class NativeIndex
 	_IS_META_PED_USING_COMPONENT = 4346,
 	_0xBD0E4F52F6D95242 = 4347,
 	_IS_PED_CHILD = 4348,
-	_0xFFA1594703ED27CA = 4349,
+	_SET_PED_VARIATION_PRESET = 4349,
 	_SET_META_PED_TAG = 4350,
 	REMOVE_TAG_FROM_META_PED = 4351,
 	_0xA2B8E47442C76CEC = 4352,
@@ -4417,7 +4417,7 @@ enum class NativeIndex
 	_CLEAR_PELT_FROM_HORSE = 4410,
 	_SET_PED_LIGHTS = 4411,
 	_0xD049FDAF089FDDB0 = 4412,
-	_0xDD9540E7B1C9714F = 4413,
+	_SET_PED_LOCAL_VFX_COLOR = 4413,
 	_0x55546004A244302A = 4414,
 	_SET_HEALTH_RECHARGE_MULTIPLIER = 4415,
 	_GET_HEALTH_RECHARGE_MULTIPLIER = 4416,
@@ -4672,7 +4672,7 @@ enum class NativeIndex
 	ROPE_FORCE_LENGTH = 4665,
 	_0x8D59079C37C21D78 = 4666,
 	_0x814D453FCFDF119F = 4667,
-	_0x1FC92BDBA1106BD2 = 4668,
+	_ROPE_SET_LENGTH_CHANGE_RATE = 4668,
 	_0xDEDE679ED29DD4E7 = 4669,
 	_0xF1EA2A881EB7F2CD = 4670,
 	_0x5A989B7EE3672A56 = 4671,
@@ -4743,7 +4743,7 @@ enum class NativeIndex
 	IS_PLAYER_FREE_AIMING_AT_ENTITY = 4736,
 	GET_ENTITY_PLAYER_IS_FREE_AIMING_AT = 4737,
 	_0x3DAABE78A23694BC = 4738,
-	_0x7AE93C45EC14A166 = 4739,
+	_GET_PLAYER_FREE_AIM_CLOSEST_ENTITY = 4739,
 	SET_PLAYER_LOCKON_RANGE_OVERRIDE = 4740,
 	SET_PLAYER_CAN_BE_HASSLED_BY_GANGS = 4741,
 	SET_PLAYER_CAN_USE_COVER = 4742,
@@ -5078,7 +5078,7 @@ enum class NativeIndex
 	_FORCE_REST_SCENARIO = 5071,
 	_0x57028FD99886F6F9 = 5072,
 	_0x35A33783EC3C3448 = 5073,
-	_0x39D8D7082BC34B72 = 5074,
+	_SET_WANTED_COOLDOWN = 5074,
 	_0x1AD8AD999C27F44A = 5075,
 	GET_NUM_MODELS_IN_POPULATION_SET = 5076,
 	GET_PED_MODEL_NAME_IN_POPULATION_SET = 5077,
@@ -5486,7 +5486,7 @@ enum class NativeIndex
 	IS_IPL_ACTIVE_HASH = 5479,
 	IS_IPL_ACTIVE_BY_HASH = 5480,
 	_IS_POSITION_INSIDE_IPL_STREAMING_EXTENTS = 5481,
-	_0xDEEE1F265B7ECEF5 = 5482,
+	_REMOVE_ALL_IPLS = 5482,
 	SET_GAME_PAUSES_FOR_STREAMING = 5483,
 	GET_NUMBER_OF_STREAMING_REQUESTS = 5484,
 	REQUEST_PTFX_ASSET = 5485,
@@ -5816,7 +5816,7 @@ enum class NativeIndex
 	_0x7FB78B2199C10E92 = 5809,
 	TASK_GUARD = 5810,
 	TASK_GUARD_CURRENT_POSITION = 5811,
-	_TASK_GUARD_ASSIGNED_DEFENSIVE_AREA_2 = 5812,
+	_TASK_GUARD_DEFENSIVE_AREA = 5812,
 	TASK_GUARD_ASSIGNED_DEFENSIVE_AREA = 5813,
 	TASK_STAND_GUARD = 5814,
 	SET_DRIVE_TASK_CRUISE_SPEED = 5815,
@@ -6111,7 +6111,7 @@ enum class NativeIndex
 	TASK_PICKUP_CARRIABLE_ENTITY = 6104,
 	TASK_HOGTIE_TARGET_PED = 6105,
 	_TASK_CUT_FREE_HOGTIED_TARGET_PED = 6106,
-	_TASK_CUT_FREE_HOGTIED_TARGET_PED_2 = 6107,
+	_TASK_CUT_FREE_HOGTIED_TARGET_PED_EX = 6107,
 	_SET_HOGTIE_ESCAPE_TIMER = 6108,
 	_GET_HOGTIE_ESCAPE_TIMER = 6109,
 	_GET_PED_WRITHE_BREAK_FREE_PROGRESS = 6110,
@@ -6438,7 +6438,7 @@ enum class NativeIndex
 	_HIDE_HORSE_REINS = 6431,
 	_SHOW_HORSE_REINS = 6432,
 	_0xD21A3D421E7F09F7 = 6433,
-	_0xA13028E22564A1BD = 6434,
+	_SET_VEHICLE_STOP_DISTANCE_BUFFER = 6434,
 	_0x485B05EF05B9AEE9 = 6435,
 	SET_BOAT_ANCHOR = 6436,
 	_0x6B53F4B811E583D2 = 6437,
@@ -6461,7 +6461,7 @@ enum class NativeIndex
 	_IS_VEHICLE_BROUGHT_TO_HALT = 6454,
 	STOP_BRINGING_VEHICLE_TO_HALT = 6455,
 	_0xE12F5ED49F44D40D = 6456,
-	_0xF6E3D38869D0F7AD = 6457,
+	_SET_CARGO_COMPARTMENT_OPEN = 6457,
 	SET_VEHICLE_DOORS_SHUT = 6458,
 	SET_VEHICLE_TYRES_CAN_BURST = 6459,
 	SET_VEHICLE_WHEELS_CAN_BREAK = 6460,
@@ -6480,7 +6480,7 @@ enum class NativeIndex
 	_0x15206E88FF7617DF = 6473,
 	_0xA7966807953A18EE = 6474,
 	_0x6B34BE961F639E21 = 6475,
-	_0xE6BD7DD3FD474415 = 6476,
+	_SET_TRAIN_COLLISION_AVOIDANCE_ENABLED = 6476,
 	_0x615B3B8E73634509 = 6477,
 	_0x38E7DD70A242D5CB = 6478,
 	_0x63509DDF102E08E8 = 6479,
@@ -6495,7 +6495,7 @@ enum class NativeIndex
 	_0x0D5FDF0D36FA10CD = 6488,
 	_0xE682002DB1F30669 = 6489,
 	_0x718EB706B6E998A0 = 6490,
-	_0xF05DFAF1ADFEF2CD = 6491,
+	_IS_POSITION_VALID_FOR_TRAIN = 6491,
 	_0xD1DF5E54F4ACBE1A = 6492,
 	_0x0FDDEE66E3465726 = 6493,
 	_0x4C05B42A8D937796 = 6494,
@@ -6682,8 +6682,8 @@ enum class NativeIndex
 	_0xCBF88256E44D5D39 = 6675,
 	_0xC325A6BAA62CF8A2 = 6676,
 	_0x0CD7914D17A970AB = 6677,
-	_0x23F66C36F8E5EAAB = 6678,
-	_0x697DF68F3A761A50 = 6679,
+	_BALLOON_ATTACH_CHAIN_TO_PILOT = 6678,
+	_BALLOON_DETACH_CHAIN_FROM_PILOT = 6679,
 	_0x27E3F2B57209FA54 = 6680,
 	DISABLE_VEHICLE_WEAPON = 6681,
 	SET_VEHICLE_CAN_BE_USED_BY_FLEEING_PEDS = 6682,
@@ -6713,16 +6713,16 @@ enum class NativeIndex
 	GET_DRIVER_OF_VEHICLE = 6706,
 	_SET_FORCE_COACH_ROBBERY_LOOT = 6707,
 	_GET_BALLOON_OBJECT_FROM_VEHICLE = 6708,
-	_0x2200AB13CBD10F4E = 6709,
-	_0xB42C87521D1BDD2F = 6710,
+	_SET_BALLOON_GO_TO_COORD = 6709,
+	_SET_BALLOON_FACE_COORD = 6710,
 	_0xC351394B932A6A50 = 6711,
 	_0x172E9DD35858DCD7 = 6712,
 	_GET_BREAKABLE_VEHICLE_LOCKS_STATE = 6713,
-	_0x877EA24EB1614495 = 6714,
+	_DETERMINE_VEHICLE_COMPARTMENT_STATE = 6714,
 	_GET_BREAKABLE_VEHICLE_LOCK_OBJECT = 6715,
 	_GET_NUM_BREAKABLE_VEHICLE_LOCK_OBJECTS = 6716,
 	SET_BREAKABLE_VEHICLE_LOCKS_UNBREAKABLE = 6717,
-	_0x9D12796EF4BF9EA9 = 6718,
+	_BREAK_LOCKS_ON_VEHICLE = 6718,
 	_0x850CE59DEC2028F3 = 6719,
 	_0x0355FE37240E2C77 = 6720,
 	_0x3D86997A86FEEF0D = 6721,
@@ -6750,11 +6750,11 @@ enum class NativeIndex
 	_0xFC4F15A7DDDC47B1 = 6743,
 	_0x4C60C333F9CCA2B6 = 6744,
 	_0xCF342503CA4C8DF1 = 6745,
-	_0x06A09A6E0C6D2A84 = 6746,
+	_SET_TRAIN_REVERSE_ENABLED = 6746,
 	_0xAE7E66A61E7C17A5 = 6747,
 	_0xEF28A614B4B264B8 = 6748,
 	_0x04F0579DBDD32F34 = 6749,
-	_0x12F6C6ED3EFF42DE = 6750,
+	_SET_VELOCITY_FOR_BALLOON = 6750,
 	_0x87B974E54C71BA7B = 6751,
 	_HAS_TRAIN_LOADED = 6752,
 	_CREATE_MISSION_TRAIN = 6753,
@@ -6767,7 +6767,7 @@ enum class NativeIndex
 	_0xF57DB8E83DCD8349 = 6760,
 	_SET_BALLOON_HOVER_STATE = 6761,
 	_SET_DRAFT_VEHICLE_ALLOW_DRAFT_ANIMAL_AUTO_CREATION = 6762,
-	_0x6835AFEA10E186F4 = 6763,
+	_SET_OARS_ROWING_SPEED = 6763,
 	_SET_DRAFT_ANIMAL_RANDOM_SEED = 6764,
 	_0x14DA8C4BC2CCD90A = 6765,
 	_0xCACAB2B123BBDBD6 = 6766,
@@ -6778,7 +6778,7 @@ enum class NativeIndex
 	_SET_TRAIN_DESTRUCTION_ENABLED = 6771,
 	_SET_VEHICLE_ROAD_LINK_FORCED = 6772,
 	_0x873AAF600CC36DAC = 6773,
-	_0x51C7694E140FAE43 = 6774,
+	_IS_VEHICLE_TOUCHING_VEGETATION = 6774,
 	_0x8DECD262602548B9 = 6775,
 	_0xCBC7B6F9A56B79F6 = 6776,
 	_0x37D238BE69F7378A = 6777,
@@ -6956,7 +6956,7 @@ enum class NativeIndex
 	GET_CURRENT_PED_WEAPON_ENTITY_INDEX = 6949,
 	_ENABLE_WEAPON_RESTORE = 6950,
 	GET_PED_BACKUP_WEAPON = 6951,
-	_0x486C96A0DCD2BC92 = 6952,
+	_IS_PED_CARRYING_BACKUP_WEAPON = 6952,
 	_GET_PED_WORST_WEAPON = 6953,
 	GET_BEST_PED_WEAPON = 6954,
 	_GET_BEST_PED_WEAPON_IN_INVENTORY = 6955,
@@ -7708,7 +7708,7 @@ namespace CAMERA
 	FORCEINLINE constexpr void SET_SCRIPTED_CAMERA_IS_FIRST_PERSON_THIS_FRAME(BOOL p0) { return YimMenu::NativeInvoker::Invoke<529, void, false>(p0); }
 	FORCEINLINE constexpr BOOL _IS_IN_FULL_FIRST_PERSON_MODE() { return YimMenu::NativeInvoker::Invoke<530, BOOL, false>(); }
 	FORCEINLINE constexpr void SHAKE_GAMEPLAY_CAM(const char* shakeName, float intensity) { return YimMenu::NativeInvoker::Invoke<531, void, false>(shakeName, intensity); }
-	FORCEINLINE constexpr void _0xC3E9E5D4F413B773(const char* shakeName, float intensity) { return YimMenu::NativeInvoker::Invoke<532, void, false>(shakeName, intensity); }
+	FORCEINLINE constexpr void _RESTART_GAMEPLAY_CAM_SHAKE_WITH_NAME(const char* shakeName, float intensity) { return YimMenu::NativeInvoker::Invoke<532, void, false>(shakeName, intensity); }
 	FORCEINLINE constexpr BOOL IS_GAMEPLAY_CAM_SHAKING() { return YimMenu::NativeInvoker::Invoke<533, BOOL, false>(); }
 	FORCEINLINE constexpr BOOL _0x0060B31968E60E41(const char* shakeName) { return YimMenu::NativeInvoker::Invoke<534, BOOL, false>(shakeName); }
 	FORCEINLINE constexpr void SET_GAMEPLAY_CAM_SHAKE_AMPLITUDE(float amplitude) { return YimMenu::NativeInvoker::Invoke<535, void, false>(amplitude); }
@@ -8225,13 +8225,13 @@ namespace ENTITY
 	FORCEINLINE constexpr BOOL HAS_ENTITY_BEEN_DAMAGED_BY_ANY_VEHICLE(Entity entity) { return YimMenu::NativeInvoker::Invoke<998, BOOL, false>(entity); }
 	FORCEINLINE constexpr BOOL HAS_ENTITY_BEEN_DAMAGED_BY_ENTITY(Entity entity1, Entity entity2, BOOL p2, BOOL p3) { return YimMenu::NativeInvoker::Invoke<999, BOOL, false>(entity1, entity2, p2, p3); }
 	FORCEINLINE constexpr BOOL _0x3EC28DA1FFAC9DDD(Entity entity1, Entity entity2, Any p2, Any p3) { return YimMenu::NativeInvoker::Invoke<1000, BOOL, false>(entity1, entity2, p2, p3); }
-	FORCEINLINE constexpr Entity _0xAF72EC7E1B54539B(Entity entity) { return YimMenu::NativeInvoker::Invoke<1001, Entity, false>(entity); }
+	FORCEINLINE constexpr Entity _GET_LAST_ENTITY_TO_DAMAGE_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1001, Entity, false>(entity); }
 	FORCEINLINE constexpr BOOL HAS_ENTITY_CLEAR_LOS_TO_ENTITY(Entity entity1, Entity entity2, int traceType) { return YimMenu::NativeInvoker::Invoke<1002, BOOL, false>(entity1, entity2, traceType); }
 	FORCEINLINE constexpr BOOL HAS_ENTITY_CLEAR_LOS_TO_COORD(Entity entity, float x, float y, float z, int flags) { return YimMenu::NativeInvoker::Invoke<1003, BOOL, false>(entity, x, y, z, flags); }
 	FORCEINLINE constexpr BOOL HAS_ENTITY_CLEAR_LOS_TO_ENTITY_IN_FRONT(Entity entity1, Entity entity2, int traceType) { return YimMenu::NativeInvoker::Invoke<1004, BOOL, false>(entity1, entity2, traceType); }
 	FORCEINLINE constexpr BOOL HAS_ENTITY_COLLIDED_WITH_ANYTHING(Entity entity) { return YimMenu::NativeInvoker::Invoke<1005, BOOL, false>(entity); }
-	FORCEINLINE constexpr float _0x6D58167F62238284(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<1006, float, false>(vehicle); }
-	FORCEINLINE constexpr float _0xDFC2B226D56D85F6(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1007, float, false>(p0, p1); }
+	FORCEINLINE constexpr float _GET_COLLISION_INTENSITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1006, float, false>(entity); }
+	FORCEINLINE constexpr float _GET_ENTITY_COLLISION_INTENSITY(Entity entity1, Entity entity2) { return YimMenu::NativeInvoker::Invoke<1007, float, false>(entity1, entity2); }
 	FORCEINLINE constexpr float GET_ANIM_DURATION(const char* animDict, const char* animName) { return YimMenu::NativeInvoker::Invoke<1008, float, false>(animDict, animName); }
 	FORCEINLINE constexpr Entity GET_ENTITY_ATTACHED_TO(Entity entity) { return YimMenu::NativeInvoker::Invoke<1009, Entity, false>(entity); }
 	FORCEINLINE constexpr Vector3 GET_ENTITY_COORDS(Entity entity, BOOL alive, BOOL realCoords) { return YimMenu::NativeInvoker::Invoke<1010, Vector3, false>(entity, alive, realCoords); }
@@ -8269,7 +8269,7 @@ namespace ENTITY
 	FORCEINLINE constexpr Vehicle GET_VEHICLE_INDEX_FROM_ENTITY_INDEX(Entity entity) { return YimMenu::NativeInvoker::Invoke<1042, Vehicle, false>(entity); }
 	FORCEINLINE constexpr Vector3 GET_WORLD_POSITION_OF_ENTITY_BONE(Entity entity, int boneIndex) { return YimMenu::NativeInvoker::Invoke<1043, Vector3, false>(entity, boneIndex); }
 	FORCEINLINE constexpr Vector3 _0x5E214112806591EA(Entity entity, int boneIndex) { return YimMenu::NativeInvoker::Invoke<1044, Vector3, false>(entity, boneIndex); }
-	FORCEINLINE constexpr Vector3 _0x3AB3A77672F6473F(Any p0, Any p1, Any p2, Any p3) { return YimMenu::NativeInvoker::Invoke<1045, Vector3, false>(p0, p1, p2, p3); }
+	FORCEINLINE constexpr Vector3 _GET_HEADING_OF_ENTITY_BONE(Entity entity, int boneIndex, int p2, int p3) { return YimMenu::NativeInvoker::Invoke<1045, Vector3, false>(entity, boneIndex, p2, p3); }
 	FORCEINLINE constexpr Player GET_NEAREST_PLAYER_TO_ENTITY(Entity entity, Ped playerPedToIgnore, int flags) { return YimMenu::NativeInvoker::Invoke<1046, Player, false>(entity, playerPedToIgnore, flags); }
 	FORCEINLINE constexpr Player GET_NEAREST_PLAYER_TO_ENTITY_ON_TEAM(Entity entity, int team, Ped playerPedToIgnore, int flags) { return YimMenu::NativeInvoker::Invoke<1047, Player, false>(entity, team, playerPedToIgnore, flags); }
 	FORCEINLINE constexpr Player GET_NEAREST_PARTICIPANT_TO_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1048, Player, false>(entity); }
@@ -8313,7 +8313,7 @@ namespace ENTITY
 	FORCEINLINE constexpr BOOL IS_ENTITY_VISIBLE(Entity entity) { return YimMenu::NativeInvoker::Invoke<1086, BOOL, false>(entity); }
 	FORCEINLINE constexpr void _0xFF9965C47FA404DA(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1087, void, false>(entity, toggle); }
 	FORCEINLINE constexpr BOOL IS_ENTITY_VISIBLE_TO_SCRIPT(Entity entity) { return YimMenu::NativeInvoker::Invoke<1088, BOOL, false>(entity); }
-	FORCEINLINE constexpr void _0x3F08C6163A4AB1D6(Any p0) { return YimMenu::NativeInvoker::Invoke<1089, void, false>(p0); }
+	FORCEINLINE constexpr void _REQUEST_ENTITY_VISIBILITY_TRACKING(Entity entity) { return YimMenu::NativeInvoker::Invoke<1089, void, false>(entity); }
 	FORCEINLINE constexpr void _0x0DB41D59E0F1502B(Any p0) { return YimMenu::NativeInvoker::Invoke<1090, void, false>(p0); }
 	FORCEINLINE constexpr BOOL _IS_TRACKED_ENTITY_VISIBLE(Entity entity) { return YimMenu::NativeInvoker::Invoke<1091, BOOL, false>(entity); }
 	FORCEINLINE constexpr BOOL IS_ENTITY_OCCLUDED(Entity entity) { return YimMenu::NativeInvoker::Invoke<1092, BOOL, false>(entity); }
@@ -8336,7 +8336,7 @@ namespace ENTITY
 	FORCEINLINE constexpr BOOL _IS_CARRIABLE_MODEL(Hash model) { return YimMenu::NativeInvoker::Invoke<1109, BOOL, false>(model); }
 	FORCEINLINE constexpr Hash _GET_CARRIABLE_FROM_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1110, Hash, false>(entity); }
 	FORCEINLINE constexpr void _SET_ENTITY_CARCASS_TYPE(Entity entity, Hash type) { return YimMenu::NativeInvoker::Invoke<1111, void, false>(entity, type); }
-	FORCEINLINE constexpr Any _0x2A77EF9BEC8518F4(Any p0) { return YimMenu::NativeInvoker::Invoke<1112, Any, false>(p0); }
+	FORCEINLINE constexpr Entity _GET_CARCASS_FROM_PELT(Entity entity) { return YimMenu::NativeInvoker::Invoke<1112, Entity, false>(entity); }
 	FORCEINLINE constexpr void _DELETE_CARRIABLE(Entity* entity) { return YimMenu::NativeInvoker::Invoke<1113, void, false>(entity); }
 	FORCEINLINE constexpr BOOL _IS_ENTITY_FULLY_LOOTED(Entity entity) { return YimMenu::NativeInvoker::Invoke<1114, BOOL, false>(entity); }
 	FORCEINLINE constexpr void _SET_ENTITY_FULLY_LOOTED(Entity entity, BOOL looted) { return YimMenu::NativeInvoker::Invoke<1115, void, false>(entity, looted); }
@@ -8348,15 +8348,15 @@ namespace ENTITY
 	FORCEINLINE constexpr void _SET_ENTITY_CARRYING_FLAG(Entity entity, int flagId, BOOL value) { return YimMenu::NativeInvoker::Invoke<1121, void, false>(entity, flagId, value); }
 	FORCEINLINE constexpr void _0xC3ABCFBC7D74AFA5(Ped ped, int p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<1122, void, false>(ped, p1, p2); }
 	FORCEINLINE constexpr void _0x371D179701D9C082(Entity entity) { return YimMenu::NativeInvoker::Invoke<1123, void, false>(entity); }
-	FORCEINLINE constexpr void _0xA48E4801DEBDF7E4(Entity entity, BOOL p1) { return YimMenu::NativeInvoker::Invoke<1124, void, false>(entity, p1); }
+	FORCEINLINE constexpr void _SET_CARRIABLE_PICKUP_LIGHT(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1124, void, false>(entity, toggle); }
 	FORCEINLINE constexpr BOOL _GET_IS_CARRIABLE_PELT(Entity entity) { return YimMenu::NativeInvoker::Invoke<1125, BOOL, false>(entity); }
 	FORCEINLINE constexpr Any _0xF59FDE7B4D31A630(Any p0) { return YimMenu::NativeInvoker::Invoke<1126, Any, false>(p0); }
-	FORCEINLINE constexpr Any _0x120376C23F019C6C(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1127, Any, false>(p0, p1); }
+	FORCEINLINE constexpr BOOL _GET_ENTITY_ALBEDO(Entity entity, Hash* albedoHash) { return YimMenu::NativeInvoker::Invoke<1127, BOOL, false>(entity, albedoHash); }
 	FORCEINLINE constexpr Any _0x5744562E973E33CD(Any p0, Any p1, Any p2, Any p3, Any p4) { return YimMenu::NativeInvoker::Invoke<1128, Any, false>(p0, p1, p2, p3, p4); }
-	FORCEINLINE constexpr void _0xDD03FC2089AD093C(Any p0, Any p1, Any p2, Any p3) { return YimMenu::NativeInvoker::Invoke<1129, void, false>(p0, p1, p2, p3); }
+	FORCEINLINE constexpr void _SET_ANIMAL_PELT_TEXTURE(Entity entity, Hash peltAsset, Hash albedoHash, int p3) { return YimMenu::NativeInvoker::Invoke<1129, void, false>(entity, peltAsset, albedoHash, p3); }
 	FORCEINLINE constexpr Any _0xB16C780C51E51E2B(Any p0) { return YimMenu::NativeInvoker::Invoke<1130, Any, false>(p0); }
 	FORCEINLINE constexpr void _0xEF259AA1E097E0AD(Entity entity, Any p1) { return YimMenu::NativeInvoker::Invoke<1131, void, false>(entity, p1); }
-	FORCEINLINE constexpr void _0xBD94CECFB2D65119(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5) { return YimMenu::NativeInvoker::Invoke<1132, void, false>(p0, p1, p2, p3, p4, p5); }
+	FORCEINLINE constexpr void _SET_AUTO_PICKUP(Entity entity, BOOL noPickupAnim, float autoPickupRange, float p3, float p4, BOOL enablePickupPrompt) { return YimMenu::NativeInvoker::Invoke<1132, void, false>(entity, noPickupAnim, autoPickupRange, p3, p4, enablePickupPrompt); }
 	FORCEINLINE constexpr void _SET_ENTITY_CUSTOM_PICKUP_RADIUS(Entity entity, float radius) { return YimMenu::NativeInvoker::Invoke<1133, void, false>(entity, radius); }
 	FORCEINLINE constexpr void _0xE75EEA8DB59A9F39(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5) { return YimMenu::NativeInvoker::Invoke<1134, void, false>(p0, p1, p2, p3, p4, p5); }
 	FORCEINLINE constexpr Any _0x188736456D1DEDE6(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1135, Any, false>(p0, p1); }
@@ -8366,7 +8366,7 @@ namespace ENTITY
 	FORCEINLINE constexpr void ATTACH_ENTITY_TO_ENTITY(Entity entity1, Entity entity2, int boneIndex, float xPos, float yPos, float zPos, float xRot, float yRot, float zRot, BOOL p9, BOOL useSoftPinning, BOOL collision, BOOL isPed, int vertexIndex, BOOL fixedRot, BOOL p15, BOOL p16) { return YimMenu::NativeInvoker::Invoke<1139, void, false>(entity1, entity2, boneIndex, xPos, yPos, zPos, xRot, yRot, zRot, p9, useSoftPinning, collision, isPed, vertexIndex, fixedRot, p15, p16); }
 	FORCEINLINE constexpr void ATTACH_ENTITY_TO_ENTITY_PHYSICALLY(Entity entity1, Entity entity2, int p2, int boneIndex, float offsetX, float offsetY, float offsetZ, float p7, float p8, float p9, float p10, float p11, float p12, float p13, BOOL p14, BOOL p15, BOOL p16, BOOL p17, int p18, BOOL p19, float p20, float p21) { return YimMenu::NativeInvoker::Invoke<1140, void, false>(entity1, entity2, p2, boneIndex, offsetX, offsetY, offsetZ, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21); }
 	FORCEINLINE constexpr void _ATTACH_ENTITY_TO_COORDS_PHYSICALLY(Entity entity, int p1, float x, float y, float z, float offsetX, float offsetY, float offsetZ, float timer, BOOL p9, int p10, int p11, int p12, int p13, int p14, int p15) { return YimMenu::NativeInvoker::Invoke<1141, void, false>(entity, p1, x, y, z, offsetX, offsetY, offsetZ, timer, p9, p10, p11, p12, p13, p14, p15); }
-	FORCEINLINE constexpr void _0x16908E859C3AB698(Any p0, Any p1, Any p2, Any p3, Any p4) { return YimMenu::NativeInvoker::Invoke<1142, void, false>(p0, p1, p2, p3, p4); }
+	FORCEINLINE constexpr void _SET_ENTITY_ATTACHED_OFFSET(Entity entity, BOOL horizontalMode, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<1142, void, false>(entity, horizontalMode, x, y, z); }
 	FORCEINLINE constexpr int GET_ENTITY_BONE_INDEX_BY_NAME(Entity entity, const char* boneName) { return YimMenu::NativeInvoker::Invoke<1143, int, false>(entity, boneName); }
 	FORCEINLINE constexpr void CLEAR_ENTITY_LAST_DAMAGE_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1144, void, false>(entity); }
 	FORCEINLINE constexpr void DELETE_ENTITY(Entity* entity) { return YimMenu::NativeInvoker::Invoke<1145, void, false>(entity); }
@@ -8382,8 +8382,8 @@ namespace ENTITY
 	FORCEINLINE constexpr void SET_OBJECT_AS_NO_LONGER_NEEDED(Object* object) { return YimMenu::NativeInvoker::Invoke<1155, void, false>(object); }
 	FORCEINLINE constexpr void _0x20FAEE47427A4497() { return YimMenu::NativeInvoker::Invoke<1156, void, false>(); }
 	FORCEINLINE constexpr BOOL _DOES_THREAD_OWN_THIS_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1157, BOOL, false>(entity); }
-	FORCEINLINE constexpr void _0x56E0735D6273B227(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1158, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0xC0EDEF16D90661EE(Entity entity, float p1) { return YimMenu::NativeInvoker::Invoke<1159, void, false>(entity, p1); }
+	FORCEINLINE constexpr void _SET_ENTITY_DISABLE_FIRE(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1158, void, false>(entity, toggle); }
+	FORCEINLINE constexpr void _SET_ENTITY_ANIM_AGE(Entity entity, float alpha) { return YimMenu::NativeInvoker::Invoke<1159, void, false>(entity, alpha); }
 	FORCEINLINE constexpr void _0x0FD7D7C232876E72(Any p0) { return YimMenu::NativeInvoker::Invoke<1160, void, false>(p0); }
 	FORCEINLINE constexpr void _0x0939E773925C4719() { return YimMenu::NativeInvoker::Invoke<1161, void, false>(); }
 	FORCEINLINE constexpr void SET_ENTITY_CAN_BE_DAMAGED(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1162, void, false>(entity, toggle); }
@@ -8402,13 +8402,13 @@ namespace ENTITY
 	FORCEINLINE constexpr void _SET_ENTITY_COORDS_AND_HEADING_NO_OFFSET(Entity entity, float xPos, float yPos, float zPos, float heading, BOOL p5, BOOL p6) { return YimMenu::NativeInvoker::Invoke<1175, void, false>(entity, xPos, yPos, zPos, heading, p5, p6); }
 	FORCEINLINE constexpr void SET_ENTITY_HEALTH(Entity entity, int healthAmount, Entity entityKilledBy) { return YimMenu::NativeInvoker::Invoke<1176, void, false>(entity, healthAmount, entityKilledBy); }
 	FORCEINLINE constexpr void SET_ENTITY_INVINCIBLE(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1177, void, false>(entity, toggle); }
-	FORCEINLINE constexpr void _0xAF7F3099B9FEB535(Entity entity, float p1, float p2, float p3) { return YimMenu::NativeInvoker::Invoke<1178, void, false>(entity, p1, p2, p3); }
+	FORCEINLINE constexpr void _SET_ENTITY_LOCKON_POINT_OFFSET(Entity entity, float offsetX, float offsetY, float offsetZ) { return YimMenu::NativeInvoker::Invoke<1178, void, false>(entity, offsetX, offsetY, offsetZ); }
 	FORCEINLINE constexpr void SET_ENTITY_IS_TARGET_PRIORITY(Entity entity, BOOL p1, float p2) { return YimMenu::NativeInvoker::Invoke<1179, void, false>(entity, p1, p2); }
 	FORCEINLINE constexpr void _0xB38A29CCD5447783(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<1180, void, false>(p0, p1, p2); }
 	FORCEINLINE constexpr void _SET_ENTITY_THREAT_TIER(Entity entity, int tier, BOOL p2) { return YimMenu::NativeInvoker::Invoke<1181, void, false>(entity, tier, p2); }
 	FORCEINLINE constexpr int _GET_ENTITY_THREAT_TIER(Entity entity) { return YimMenu::NativeInvoker::Invoke<1182, int, false>(entity); }
-	FORCEINLINE constexpr void _0x2D40BCBFE9305DEA(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1183, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _SET_ENTITY_LIGHTS_ENABLED(Entity entity, BOOL enabled) { return YimMenu::NativeInvoker::Invoke<1184, void, false>(entity, enabled); }
+	FORCEINLINE constexpr void _SET_ENTITY_LIGHTS_OFF(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1183, void, false>(entity, toggle); }
+	FORCEINLINE constexpr void _SET_ENTITY_LIGHTS_ENABLED(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1184, void, false>(entity, toggle); }
 	FORCEINLINE constexpr void SET_ENTITY_LOAD_COLLISION_FLAG(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1185, void, false>(entity, toggle); }
 	FORCEINLINE constexpr BOOL HAS_COLLISION_LOADED_AROUND_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1186, BOOL, false>(entity); }
 	FORCEINLINE constexpr BOOL HAS_COLLISION_LOADED_AROUND_POSITION(float xPos, float yPos, float zPos) { return YimMenu::NativeInvoker::Invoke<1187, BOOL, false>(xPos, yPos, zPos); }
@@ -8418,7 +8418,7 @@ namespace ENTITY
 	FORCEINLINE constexpr int _GET_ENTITY_PROOFS(Entity entity) { return YimMenu::NativeInvoker::Invoke<1191, int, false>(entity); }
 	FORCEINLINE constexpr void SET_ENTITY_QUATERNION(Entity entity, float x, float y, float z, float w) { return YimMenu::NativeInvoker::Invoke<1192, void, false>(entity, x, y, z, w); }
 	FORCEINLINE constexpr void SET_ENTITY_ROTATION(Entity entity, float pitch, float roll, float yaw, int rotationOrder, BOOL p5) { return YimMenu::NativeInvoker::Invoke<1193, void, false>(entity, pitch, roll, yaw, rotationOrder, p5); }
-	FORCEINLINE constexpr void _0xD45BB89B53FC0CFD(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6, Any p7) { return YimMenu::NativeInvoker::Invoke<1194, void, false>(p0, p1, p2, p3, p4, p5, p6, p7); }
+	FORCEINLINE constexpr void _SET_ENTITY_ROTATION_PARALLEL_TO_LINE(Entity entity, float x1, float y1, float z1, float x2, float y2, float z2, int p7) { return YimMenu::NativeInvoker::Invoke<1194, void, false>(entity, x1, y1, z1, x2, y2, z2, p7); }
 	FORCEINLINE constexpr void SET_ENTITY_VISIBLE(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1195, void, false>(entity, toggle); }
 	FORCEINLINE constexpr void _0x80FDEB3A9E9AA578(Entity entity, BOOL p1) { return YimMenu::NativeInvoker::Invoke<1196, void, false>(entity, p1); }
 	FORCEINLINE constexpr void _0x9C6906EF8CB20C5F(Entity entity) { return YimMenu::NativeInvoker::Invoke<1197, void, false>(entity); }
@@ -8439,7 +8439,7 @@ namespace ENTITY
 	FORCEINLINE constexpr void CREATE_MODEL_HIDE(float x, float y, float z, float radius, Hash model, BOOL p5) { return YimMenu::NativeInvoker::Invoke<1212, void, false>(x, y, z, radius, model, p5); }
 	FORCEINLINE constexpr void CREATE_MODEL_HIDE_EXCLUDING_SCRIPT_OBJECTS(float x, float y, float z, float radius, Hash model, BOOL p5) { return YimMenu::NativeInvoker::Invoke<1213, void, false>(x, y, z, radius, model, p5); }
 	FORCEINLINE constexpr void REMOVE_MODEL_HIDE(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5) { return YimMenu::NativeInvoker::Invoke<1214, void, false>(p0, p1, p2, p3, p4, p5); }
-	FORCEINLINE constexpr Any _0xD4636C2EDB0DEA8A(Any p0) { return YimMenu::NativeInvoker::Invoke<1215, Any, false>(p0); }
+	FORCEINLINE constexpr BOOL _IS_BATCH_MODEL(Hash model) { return YimMenu::NativeInvoker::Invoke<1215, BOOL, false>(model); }
 	FORCEINLINE constexpr void CREATE_FORCED_OBJECT(float x, float y, float z, Any p3, Hash modelHash, BOOL p5) { return YimMenu::NativeInvoker::Invoke<1216, void, false>(x, y, z, p3, modelHash, p5); }
 	FORCEINLINE constexpr void REMOVE_FORCED_OBJECT(Any p0, Any p1, Any p2, Any p3, Any p4) { return YimMenu::NativeInvoker::Invoke<1217, void, false>(p0, p1, p2, p3, p4); }
 	FORCEINLINE constexpr void SET_ENTITY_NO_COLLISION_ENTITY(Entity entity1, Entity entity2, BOOL thisFrameOnly) { return YimMenu::NativeInvoker::Invoke<1218, void, false>(entity1, entity2, thisFrameOnly); }
@@ -8451,8 +8451,8 @@ namespace ENTITY
 	FORCEINLINE constexpr int GET_MATCHING_ENTITIES(Volume volume, ItemSet itemSet, int entityType, Any p3, Hash p4, const char* p5) { return YimMenu::NativeInvoker::Invoke<1224, int, false>(volume, itemSet, entityType, p3, p4, p5); }
 	FORCEINLINE constexpr int _GET_ENTITIES_IN_VOLUME(Volume volume, ItemSet itemSet, int entityType) { return YimMenu::NativeInvoker::Invoke<1225, int, false>(volume, itemSet, entityType); }
 	FORCEINLINE constexpr Entity _SEARCH_BUILDING_POOL_FOR_ENTITY_WITH_THIS_MODEL(Hash modelHash) { return YimMenu::NativeInvoker::Invoke<1226, Entity, false>(modelHash); }
-	FORCEINLINE constexpr Any _0xC2E71D7E0A7B4C89(Any p0) { return YimMenu::NativeInvoker::Invoke<1227, Any, false>(p0); }
-	FORCEINLINE constexpr void _0x6C31B06E91518269(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1228, void, false>(p0, p1); }
+	FORCEINLINE constexpr BOOL _IS_TRAIN_INTERIOR_LOADED(Entity entity) { return YimMenu::NativeInvoker::Invoke<1227, BOOL, false>(entity); }
+	FORCEINLINE constexpr void _PRELOAD_ENTITY_INTERIOR(Entity entity, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1228, void, false>(entity, toggle); }
 	FORCEINLINE constexpr void _FORCE_TRAIN_WAGON_POPULATION(Entity trainWagon, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<1229, void, false>(trainWagon, toggle); }
 	FORCEINLINE constexpr Entity _GET_ENTITY_BY_DOORHASH(Hash doorHash, int p1) { return YimMenu::NativeInvoker::Invoke<1230, Entity, false>(doorHash, p1); }
 	FORCEINLINE constexpr BOOL FIND_ANIM_EVENT_PHASE(const char* animDictionary, const char* animName, const char* p2, void* p3, void* p4) { return YimMenu::NativeInvoker::Invoke<1231, BOOL, false>(animDictionary, animName, p2, p3, p4); }
@@ -8474,13 +8474,13 @@ namespace ENTITY
 	FORCEINLINE constexpr void _0xC76E94A78127412B(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<1247, void, false>(p0, p1, p2); }
 	FORCEINLINE constexpr void _0x7F20092547B4DDEA(Any p0) { return YimMenu::NativeInvoker::Invoke<1248, void, false>(p0); }
 	FORCEINLINE constexpr void _0xF41E2979D5BC5370(Any p0) { return YimMenu::NativeInvoker::Invoke<1249, void, false>(p0); }
-	FORCEINLINE constexpr Any _0xAAACB74442C1BED3(Any p0) { return YimMenu::NativeInvoker::Invoke<1250, Any, false>(p0); }
+	FORCEINLINE constexpr int _PIN_MAP_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1250, int, false>(entity); }
 	FORCEINLINE constexpr Any PIN_CLOSEST_MAP_ENTITY(Hash modelHash, float x, float y, float z, int flags) { return YimMenu::NativeInvoker::Invoke<1251, Any, false>(modelHash, x, y, z, flags); }
-	FORCEINLINE constexpr void _UNPIN_MAP_ENTITY(Entity entity) { return YimMenu::NativeInvoker::Invoke<1252, void, false>(entity); }
+	FORCEINLINE constexpr void _UNPIN_MAP_ENTITY(int pinId) { return YimMenu::NativeInvoker::Invoke<1252, void, false>(pinId); }
 	FORCEINLINE constexpr BOOL IS_MAP_ENTITY_PINNED(Any p0) { return YimMenu::NativeInvoker::Invoke<1253, BOOL, false>(p0); }
 	FORCEINLINE constexpr Entity _GET_PINNED_MAP_ENTITY(Any p0) { return YimMenu::NativeInvoker::Invoke<1254, Entity, false>(p0); }
-	FORCEINLINE constexpr void _0xEAB3D91D30A344F1(Any p0) { return YimMenu::NativeInvoker::Invoke<1255, void, false>(p0); }
-	FORCEINLINE constexpr void _0x37CEB637BA3B1A47(Any p0) { return YimMenu::NativeInvoker::Invoke<1256, void, false>(p0); }
+	FORCEINLINE constexpr void _ENABLE_STAIRS_STEP_FOR_VOLUME(Volume volume) { return YimMenu::NativeInvoker::Invoke<1255, void, false>(volume); }
+	FORCEINLINE constexpr void _DISABLE_STAIRS_STEP_FOR_VOLUME(Volume volume) { return YimMenu::NativeInvoker::Invoke<1256, void, false>(volume); }
 	FORCEINLINE constexpr Any _0x350E9211074955AF(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1257, Any, false>(p0, p1); }
 	FORCEINLINE constexpr void _0x898586729DB5221D(Ped ped) { return YimMenu::NativeInvoker::Invoke<1258, void, false>(ped); }
 	FORCEINLINE constexpr void _0xE9E7A0BAC7F57746(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<1259, void, false>(p0, p1); }
@@ -8702,10 +8702,10 @@ namespace GRAPHICS
 	FORCEINLINE constexpr BOOL GET_TOGGLE_PAUSED_RENDERPHASES_STATUS() { return YimMenu::NativeInvoker::Invoke<1459, BOOL, false>(); }
 	FORCEINLINE constexpr void RESET_PAUSED_RENDERPHASES() { return YimMenu::NativeInvoker::Invoke<1460, void, false>(); }
 	FORCEINLINE constexpr void SET_HIDOF_OVERRIDE(BOOL p0, BOOL p1, float p2, float p3, float p4, float p5) { return YimMenu::NativeInvoker::Invoke<1461, void, false>(p0, p1, p2, p3, p4, p5); }
-	FORCEINLINE constexpr void _0x21F00E08CBB5F37B(const char* component) { return YimMenu::NativeInvoker::Invoke<1462, void, false>(component); }
-	FORCEINLINE constexpr void _0x5AC6E0FA028369DE() { return YimMenu::NativeInvoker::Invoke<1463, void, false>(); }
+	FORCEINLINE constexpr void _SET_MASK_OVERLAY(const char* maskName) { return YimMenu::NativeInvoker::Invoke<1462, void, false>(maskName); }
+	FORCEINLINE constexpr void _RESET_MASK_OVERLAY() { return YimMenu::NativeInvoker::Invoke<1463, void, false>(); }
 	FORCEINLINE constexpr BOOL _0xEC3D8C228FE553D7(BOOL p0) { return YimMenu::NativeInvoker::Invoke<1464, BOOL, false>(p0); }
-	FORCEINLINE constexpr void _0xF5793BB386E1FF9C(Any p0) { return YimMenu::NativeInvoker::Invoke<1465, void, false>(p0); }
+	FORCEINLINE constexpr void _SET_PHOTO_MODE_AO_ENHANCED(BOOL bEnabled) { return YimMenu::NativeInvoker::Invoke<1465, void, false>(bEnabled); }
 	FORCEINLINE constexpr void _SET_PHOTO_MODE_EXPOSURE_LOCKED(BOOL locked) { return YimMenu::NativeInvoker::Invoke<1466, void, false>(locked); }
 	FORCEINLINE constexpr void _CHANGE_PHOTO_MODE_EXPOSURE(float value) { return YimMenu::NativeInvoker::Invoke<1467, void, false>(value); }
 	FORCEINLINE constexpr float _GET_PHOTO_MODE_EXPOSURE() { return YimMenu::NativeInvoker::Invoke<1468, float, false>(); }
@@ -8824,7 +8824,7 @@ namespace GRAPHICS
 	FORCEINLINE constexpr void _ANIMPOSTFX_SET_POSTFX_COLOR(const char* effectName, int p1, int red, int green, int blue, int alpha) { return YimMenu::NativeInvoker::Invoke<1581, void, false>(effectName, p1, red, green, blue, alpha); }
 	FORCEINLINE constexpr BOOL _0xB958D97A0DFAA0C2(const char* effectName) { return YimMenu::NativeInvoker::Invoke<1582, BOOL, false>(effectName); }
 	FORCEINLINE constexpr void _0xA201A3D0AC087C37(const char* effectName) { return YimMenu::NativeInvoker::Invoke<1583, void, false>(effectName); }
-	FORCEINLINE constexpr BOOL _0xFBF161FCFEC8589E(const char* effectName, int p1, BOOL p2, BOOL* p3) { return YimMenu::NativeInvoker::Invoke<1584, BOOL, false>(effectName, p1, p2, p3); }
+	FORCEINLINE constexpr BOOL _ANIMPOSTFX_HAS_EVENT_TRIGGERED(const char* effectName, int eventType, BOOL bPeekOnly, BOOL* bIsRegistered) { return YimMenu::NativeInvoker::Invoke<1584, BOOL, false>(effectName, eventType, bPeekOnly, bIsRegistered); }
 	FORCEINLINE constexpr Hash _ANIMPOSTFX_GET_STACKHASH(const char* effectName) { return YimMenu::NativeInvoker::Invoke<1585, Hash, false>(effectName); }
 	FORCEINLINE constexpr void _ANIMPOSTFX_PRELOAD_POSTFX_BY_STACKHASH(Hash effectNameHash) { return YimMenu::NativeInvoker::Invoke<1586, void, false>(effectNameHash); }
 	FORCEINLINE constexpr BOOL ANIMPOSTFX_IS_PRELOADING_BY_STACKHASH(Hash effectNameHash) { return YimMenu::NativeInvoker::Invoke<1587, BOOL, false>(effectNameHash); }
@@ -9130,10 +9130,10 @@ namespace HUD
 namespace IK
 {
 	FORCEINLINE constexpr void _INVERSE_KINEMATICS_REQUEST_LOOK_AT(Ped ped, void* args) { return YimMenu::NativeInvoker::Invoke<1873, void, false>(ped, args); }
-	FORCEINLINE constexpr void _0x0B9F7A01EC50448D(Ped ped, void* args) { return YimMenu::NativeInvoker::Invoke<1874, void, false>(ped, args); }
-	FORCEINLINE constexpr void _INVERSE_KINEMATICS_SET_DISABLED_FOR_PED(Ped ped, int p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<1875, void, false>(ped, p1, p2); }
-	FORCEINLINE constexpr BOOL _0x6098139150DCC745(Ped ped, int p1) { return YimMenu::NativeInvoker::Invoke<1876, BOOL, false>(ped, p1); }
-	FORCEINLINE constexpr void _0x873C792E07A32C8B(Ped ped1, Ped ped2) { return YimMenu::NativeInvoker::Invoke<1877, void, false>(ped1, ped2); }
+	FORCEINLINE constexpr void _INVERSE_KINEMATICS_POINT_AT(Ped ped, void* args) { return YimMenu::NativeInvoker::Invoke<1874, void, false>(ped, args); }
+	FORCEINLINE constexpr BOOL _INVERSE_KINEMATICS_SET_DISABLED_FOR_PED(Ped ped, int ikIndex, BOOL disabled) { return YimMenu::NativeInvoker::Invoke<1875, BOOL, false>(ped, ikIndex, disabled); }
+	FORCEINLINE constexpr BOOL _INVERSE_KINEMATICS_IS_ACTIVE(Ped ped, int ikIndex) { return YimMenu::NativeInvoker::Invoke<1876, BOOL, false>(ped, ikIndex); }
+	FORCEINLINE constexpr void _IK_SET_FOCUS_ENTITY_FOR_PED(Ped ped, Entity targetEntity) { return YimMenu::NativeInvoker::Invoke<1877, void, false>(ped, targetEntity); }
 }
 
 namespace INTERACTION
@@ -9307,9 +9307,9 @@ namespace ITEMDATABASE
 	FORCEINLINE constexpr int _0x799FCD53358ED5FA(Any bundle, Any p1) { return YimMenu::NativeInvoker::Invoke<2032, int, false>(bundle, p1); }
 	FORCEINLINE constexpr BOOL _0xC4146375D8A0B374(Any bundle, Any p1, int index, Any p3) { return YimMenu::NativeInvoker::Invoke<2033, BOOL, false>(bundle, p1, index, p3); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_GET_BUNDLE_ACQUIRE_COST_MODIFIERS(Hash bundle, void* outData) { return YimMenu::NativeInvoker::Invoke<2034, BOOL, false>(bundle, outData); }
-	FORCEINLINE constexpr int _0x7A35A72A692BE9DB(Any p0) { return YimMenu::NativeInvoker::Invoke<2035, int, false>(p0); }
-	FORCEINLINE constexpr BOOL _0x3A0B667ABFF87F6E(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<2036, BOOL, false>(p0, p1, p2); }
-	FORCEINLINE constexpr int _0x388088BFF3681189(Hash bundle, Hash costtype) { return YimMenu::NativeInvoker::Invoke<2037, int, false>(bundle, costtype); }
+	FORCEINLINE constexpr int _ITEMDATABASE_GET_BUNDLE_ACQUIRE_COSTS_COUNT(Hash bundle) { return YimMenu::NativeInvoker::Invoke<2035, int, false>(bundle); }
+	FORCEINLINE constexpr BOOL _ITEMDATABASE_GET_BUNDLE_ACQUIRE_COST(Hash bundle, int index, void* outData) { return YimMenu::NativeInvoker::Invoke<2036, BOOL, false>(bundle, index, outData); }
+	FORCEINLINE constexpr int _ITEMDATABASE_GET_BUNDLE_ACQUIRE_COSTS_COUNT_FROM_COST(Hash bundle, Hash cost) { return YimMenu::NativeInvoker::Invoke<2037, int, false>(bundle, cost); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_FILLOUT_BUNDLE(Hash bundle, Hash costtype, int index, void* outData) { return YimMenu::NativeInvoker::Invoke<2038, BOOL, false>(bundle, costtype, index, outData); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_IS_SHOP_KEY_VALID(Hash shopType) { return YimMenu::NativeInvoker::Invoke<2039, BOOL, false>(shopType); }
 	FORCEINLINE constexpr int _ITEMDATABASE_GET_SHOP_INVENTORIES_ITEMS_COUNT(Hash shopType) { return YimMenu::NativeInvoker::Invoke<2040, int, false>(shopType); }
@@ -9338,9 +9338,9 @@ namespace ITEMDATABASE
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_FILLOUT_MODIFIER(Hash key, int index, void* outData) { return YimMenu::NativeInvoker::Invoke<2063, BOOL, false>(key, index, outData); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_GET_PRIORITY_ACCESS_AWARD(Hash award) { return YimMenu::NativeInvoker::Invoke<2064, BOOL, false>(award); }
 	FORCEINLINE constexpr int _ITEMDATABASE_GET_AWARD_ITEM_COUNT(Hash award) { return YimMenu::NativeInvoker::Invoke<2065, int, false>(award); }
-	FORCEINLINE constexpr int _0x48229CE0C7938237(Hash award) { return YimMenu::NativeInvoker::Invoke<2066, int, false>(award); }
+	FORCEINLINE constexpr int _ITEMDATABASE_GET_AWARD_UNLOCK_FLAG_COUNT(Hash award) { return YimMenu::NativeInvoker::Invoke<2066, int, false>(award); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_FILLOUT_AWARD_ITEM_INFO(Hash award, int index, Hash* outData) { return YimMenu::NativeInvoker::Invoke<2067, BOOL, false>(award, index, outData); }
-	FORCEINLINE constexpr BOOL _0x8D029948CA29409B(Hash award, int index, void* outData) { return YimMenu::NativeInvoker::Invoke<2068, BOOL, false>(award, index, outData); }
+	FORCEINLINE constexpr BOOL _ITEMDATABASE_FILLOUT_AWARD_UNLOCK_FLAG(Hash award, int index, void* outData) { return YimMenu::NativeInvoker::Invoke<2068, BOOL, false>(award, index, outData); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_GET_AWARD_COST_MODIFIERS(Hash award, void* outData) { return YimMenu::NativeInvoker::Invoke<2069, BOOL, false>(award, outData); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_GET_AWARD_INFO(Hash award, void* outData) { return YimMenu::NativeInvoker::Invoke<2070, BOOL, false>(award, outData); }
 	FORCEINLINE constexpr BOOL _ITEMDATABASE_DOES_ITEM_HAVE_TAG(Hash item, Hash tag, Hash tagType) { return YimMenu::NativeInvoker::Invoke<2071, BOOL, false>(item, tag, tagType); }
@@ -9352,7 +9352,7 @@ namespace ITEMDATABASE
 	FORCEINLINE constexpr Any _ITEMDATABASE_LOCALIZATION_GET_TYPE(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<2077, Any, false>(p0, p1); }
 	FORCEINLINE constexpr int _ITEMDATABASE_LOCALIZATION_GET_VALUE(Any p0, Hash label, Any p2) { return YimMenu::NativeInvoker::Invoke<2078, int, false>(p0, label, p2); }
 	FORCEINLINE constexpr int _ITEMDATABASE_GET_ITEM_PATHSET(Hash key, Hash defaultPathset) { return YimMenu::NativeInvoker::Invoke<2079, int, false>(key, defaultPathset); }
-	FORCEINLINE constexpr Hash _0xAA29A5F13B2C20B2(Any p0, Hash p1) { return YimMenu::NativeInvoker::Invoke<2080, Hash, false>(p0, p1); }
+	FORCEINLINE constexpr Hash _ITEMDATABASE_GET_CATALOG_ITEM_CATEGORY_PATHSET(Hash catalogItemCategory, Hash p1) { return YimMenu::NativeInvoker::Invoke<2080, Hash, false>(catalogItemCategory, p1); }
 }
 
 namespace ITEMSETS
@@ -9444,7 +9444,7 @@ namespace LAW
 	FORCEINLINE constexpr void _0x9C8A2BF37E966464(Player player, ItemSet itemSet) { return YimMenu::NativeInvoker::Invoke<2161, void, false>(player, itemSet); }
 	FORCEINLINE constexpr BOOL _0x9D5C9A5A3321B128(Player player) { return YimMenu::NativeInvoker::Invoke<2162, BOOL, false>(player); }
 	FORCEINLINE constexpr BOOL _0x0F230DE0DDBE3649(Player player) { return YimMenu::NativeInvoker::Invoke<2163, BOOL, false>(player); }
-	FORCEINLINE constexpr BOOL _0x9945A3E2528A02E8(Player player) { return YimMenu::NativeInvoker::Invoke<2164, BOOL, false>(player); }
+	FORCEINLINE constexpr BOOL _HAS_PLAYER_BEEN_FOUND_BY_LAW_ACTIVE_SEARCH(Player player) { return YimMenu::NativeInvoker::Invoke<2164, BOOL, false>(player); }
 	FORCEINLINE constexpr float _GET_TIME_SINCE_LAST_SEEN_BY_LAW(Player player) { return YimMenu::NativeInvoker::Invoke<2165, float, false>(player); }
 	FORCEINLINE constexpr void _0x9B4C564BFA7CFF37(float p0) { return YimMenu::NativeInvoker::Invoke<2166, void, false>(p0); }
 	FORCEINLINE constexpr void _SET_ALLOW_DISABLED_LAW_RESPONSES(BOOL toggle) { return YimMenu::NativeInvoker::Invoke<2167, void, false>(toggle); }
@@ -9457,10 +9457,10 @@ namespace LAW
 	FORCEINLINE constexpr void _PAUSE_BOUNTY_HUNTER_COOLDOWN(Hash p0, BOOL p1, Any p2) { return YimMenu::NativeInvoker::Invoke<2174, void, false>(p0, p1, p2); }
 	FORCEINLINE constexpr void _0xE9AC8466ABE484BB(BOOL p0, Any p1) { return YimMenu::NativeInvoker::Invoke<2175, void, false>(p0, p1); }
 	FORCEINLINE constexpr BOOL _0x40851BCC33ACD9AB(Ped ped) { return YimMenu::NativeInvoker::Invoke<2176, BOOL, false>(ped); }
-	FORCEINLINE constexpr BOOL _0xF46108C50A22B029() { return YimMenu::NativeInvoker::Invoke<2177, BOOL, false>(); }
-	FORCEINLINE constexpr void _0x7803436E68C32B26() { return YimMenu::NativeInvoker::Invoke<2178, void, false>(); }
-	FORCEINLINE constexpr void _0xC310239ACCCF5579() { return YimMenu::NativeInvoker::Invoke<2179, void, false>(); }
-	FORCEINLINE constexpr void _0x29CD4896ECB66C12() { return YimMenu::NativeInvoker::Invoke<2180, void, false>(); }
+	FORCEINLINE constexpr BOOL _IS_PLAYER_SEARCHED() { return YimMenu::NativeInvoker::Invoke<2177, BOOL, false>(); }
+	FORCEINLINE constexpr void _FORCE_PLAYER_SEARCH() { return YimMenu::NativeInvoker::Invoke<2178, void, false>(); }
+	FORCEINLINE constexpr void _FORCE_PLAYER_SEARCH_THIS_FRAME() { return YimMenu::NativeInvoker::Invoke<2179, void, false>(); }
+	FORCEINLINE constexpr void _STOP_PLAYER_SEARCH() { return YimMenu::NativeInvoker::Invoke<2180, void, false>(); }
 	FORCEINLINE constexpr void _0xE94B5E938619712E() { return YimMenu::NativeInvoker::Invoke<2181, void, false>(); }
 	FORCEINLINE constexpr int _0x7FC667F6DDFBCDCC(Player player) { return YimMenu::NativeInvoker::Invoke<2182, int, false>(player); }
 	FORCEINLINE constexpr void _0x9C5BD8C562565CE6(Hash* crimeType) { return YimMenu::NativeInvoker::Invoke<2183, void, false>(crimeType); }
@@ -9782,9 +9782,9 @@ namespace MISC
 	FORCEINLINE constexpr BOOL IS_BULLET_IN_BOX(float p0, float p1, float p2, float p3, float p4, float p5, BOOL p6) { return YimMenu::NativeInvoker::Invoke<2483, BOOL, false>(p0, p1, p2, p3, p4, p5, p6); }
 	FORCEINLINE constexpr BOOL HAS_BULLET_IMPACTED_IN_AREA(float x, float y, float z, float p3, BOOL p4, BOOL p5) { return YimMenu::NativeInvoker::Invoke<2484, BOOL, false>(x, y, z, p3, p4, p5); }
 	FORCEINLINE constexpr BOOL HAS_BULLET_IMPACTED_IN_BOX(float p0, float p1, float p2, float p3, float p4, float p5, BOOL p6, BOOL p7) { return YimMenu::NativeInvoker::Invoke<2485, BOOL, false>(p0, p1, p2, p3, p4, p5, p6, p7); }
-	FORCEINLINE constexpr Any _0x7A76104CC2CC69E8(Entity entity, int p1, int p2) { return YimMenu::NativeInvoker::Invoke<2486, Any, false>(entity, p1, p2); }
-	FORCEINLINE constexpr Any _0xDC416CA762BC4F43(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5) { return YimMenu::NativeInvoker::Invoke<2487, Any, false>(p0, p1, p2, p3, p4, p5); }
-	FORCEINLINE constexpr Any _0x970339EFA4FDE518(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<2488, Any, false>(p0, p1, p2); }
+	FORCEINLINE constexpr BOOL _HAS_BULLET_IMPACTED_ENTITY(Entity entity, BOOL p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<2486, BOOL, false>(entity, p1, p2); }
+	FORCEINLINE constexpr int _GET_NUMBER_OF_BULLETS_IN_AREA(float x, float y, float z, float radius, BOOL p4, BOOL p5) { return YimMenu::NativeInvoker::Invoke<2487, int, false>(x, y, z, radius, p4, p5); }
+	FORCEINLINE constexpr int _GET_NUMBER_OF_BULLETS_IMPACTED_ENTITY(Entity entity, BOOL p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<2488, int, false>(entity, p1, p2); }
 	FORCEINLINE constexpr BOOL IS_ORBIS_VERSION() { return YimMenu::NativeInvoker::Invoke<2489, BOOL, false>(); }
 	FORCEINLINE constexpr BOOL IS_DURANGO_VERSION() { return YimMenu::NativeInvoker::Invoke<2490, BOOL, false>(); }
 	FORCEINLINE constexpr BOOL IS_PC_VERSION() { return YimMenu::NativeInvoker::Invoke<2491, BOOL, false>(); }
@@ -10582,7 +10582,7 @@ namespace OBJECT
 	FORCEINLINE constexpr void _SET_OBJECT_TARGETTABLE_2(Object object, BOOL targettable) { return YimMenu::NativeInvoker::Invoke<3263, void, false>(object, targettable); }
 	FORCEINLINE constexpr void _SET_OBJECT_TARGETTABLE_FOCUS(Object object, BOOL p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<3264, void, false>(object, p1, p2); }
 	FORCEINLINE constexpr void _0xF6E88489B4E6EBE5(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3265, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0xE157A8A336C7F04A(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3266, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _SET_OBJECT_MARKABLE_IN_DEADEYE(Object object, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3266, void, false>(object, toggle); }
 	FORCEINLINE constexpr void _0x46CBCF0E98A4E156(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3267, void, false>(p0, p1); }
 	FORCEINLINE constexpr Object GET_CLOSEST_OBJECT_OF_TYPE(float x, float y, float z, float radius, Hash modelHash, BOOL missionScriptObject, BOOL scriptHostObject, BOOL networkObject) { return YimMenu::NativeInvoker::Invoke<3268, Object, false>(x, y, z, radius, modelHash, missionScriptObject, scriptHostObject, networkObject); }
 	FORCEINLINE constexpr BOOL HAS_OBJECT_BEEN_BROKEN(Any p0) { return YimMenu::NativeInvoker::Invoke<3269, BOOL, false>(p0); }
@@ -10595,32 +10595,32 @@ namespace OBJECT
 	FORCEINLINE constexpr int DOOR_SYSTEM_GET_DOOR_STATE(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3276, int, false>(doorHash); }
 	FORCEINLINE constexpr void DOOR_SYSTEM_SET_AUTOMATIC_RATE(Hash doorHash, float rate) { return YimMenu::NativeInvoker::Invoke<3277, void, false>(doorHash, rate); }
 	FORCEINLINE constexpr void DOOR_SYSTEM_SET_AUTOMATIC_DISTANCE(Hash doorHash, float distance) { return YimMenu::NativeInvoker::Invoke<3278, void, false>(doorHash, distance); }
-	FORCEINLINE constexpr void _0xB3B1546D23DF8DE1(Any p0, Any p1, Any p2, Any p3, Any p4) { return YimMenu::NativeInvoker::Invoke<3279, void, false>(p0, p1, p2, p3, p4); }
+	FORCEINLINE constexpr void _DOOR_SYSTEM_SWING_OPEN(Hash doorHash, float dirX, float dirY, float dirZ, BOOL reverseDirection) { return YimMenu::NativeInvoker::Invoke<3279, void, false>(doorHash, dirX, dirY, dirZ, reverseDirection); }
 	FORCEINLINE constexpr void DOOR_SYSTEM_SET_OPEN_RATIO(Hash doorHash, float ajar, BOOL forceUpdate) { return YimMenu::NativeInvoker::Invoke<3280, void, false>(doorHash, ajar, forceUpdate); }
 	FORCEINLINE constexpr void _0x3A77DAE8B4FD7586(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3281, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _DOOR_SYSTEM_SET_ABLE_TO_CHANGE_OPEN_RATIO_WHILE_LOCKED(Hash doorHash, BOOL p1) { return YimMenu::NativeInvoker::Invoke<3282, void, false>(doorHash, p1); }
 	FORCEINLINE constexpr BOOL _IS_DOOR_REGISTERED_WITH_OWNER(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3283, BOOL, false>(doorHash); }
 	FORCEINLINE constexpr void _DOOR_SYSTEM_CHANGE_SCRIPT_OWNER(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3284, void, false>(doorHash); }
 	FORCEINLINE constexpr float _DOOR_SYSTEM_GET_AUTOMATIC_RATE(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3285, float, false>(doorHash); }
-	FORCEINLINE constexpr Any _0x6E2AA80BB0C03728(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3286, Any, false>(p0, p1); }
+	FORCEINLINE constexpr BOOL _DOOR_SYSTEM_CHECK_ACTION_FLAG(Hash doorHash, int flag) { return YimMenu::NativeInvoker::Invoke<3286, BOOL, false>(doorHash, flag); }
 	FORCEINLINE constexpr void _DOOR_SYSTEM_SET_AUTOMATIC_STATE(Hash doorHash, BOOL disable) { return YimMenu::NativeInvoker::Invoke<3287, void, false>(doorHash, disable); }
 	FORCEINLINE constexpr float DOOR_SYSTEM_GET_OPEN_RATIO(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3288, float, false>(doorHash); }
 	FORCEINLINE constexpr void _0x7F458B543006C8FE(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3289, void, false>(p0, p1); }
 	FORCEINLINE constexpr Any _0xACD4F9831DFAD7F5(Any p0) { return YimMenu::NativeInvoker::Invoke<3290, Any, false>(p0); }
 	FORCEINLINE constexpr void _0x0C0A373D181BF900(Any p0) { return YimMenu::NativeInvoker::Invoke<3291, void, false>(p0); }
-	FORCEINLINE constexpr void _0xA93F925F1942E434(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3292, void, false>(p0, p1); }
-	FORCEINLINE constexpr Any _0x4D8611DFE1126478(Any p0) { return YimMenu::NativeInvoker::Invoke<3293, Any, false>(p0); }
+	FORCEINLINE constexpr void _SET_DOOR_KNOCKING_WHEN_LOCKED(Hash doorHash, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3292, void, false>(doorHash, toggle); }
+	FORCEINLINE constexpr BOOL _GET_DOOR_KNOCKING_WHEN_LOCKED(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3293, BOOL, false>(doorHash); }
 	FORCEINLINE constexpr void _0x57C242543B7B8FB9(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3294, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _0x4AE07EBA3462C5D5(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3295, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _0x22031584496CFB70(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3296, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0xC07B91B996C1DE89(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3297, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _SET_DOOR_KICK_PROMPT_ENABLED(Hash doorHash, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3297, void, false>(doorHash, toggle); }
 	FORCEINLINE constexpr BOOL IS_DOOR_REGISTERED_WITH_SYSTEM(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3298, BOOL, false>(doorHash); }
 	FORCEINLINE constexpr BOOL IS_DOOR_CLOSED(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3299, BOOL, false>(doorHash); }
-	FORCEINLINE constexpr Any _0x0943113E02322164(Object object, int p1) { return YimMenu::NativeInvoker::Invoke<3300, Any, false>(object, p1); }
+	FORCEINLINE constexpr BOOL _CHECK_DOOR_ACTION_FLAG(Object doorObject, int flag) { return YimMenu::NativeInvoker::Invoke<3300, BOOL, false>(doorObject, flag); }
 	FORCEINLINE constexpr Any _0x614D0B4533F842D3(Any p0) { return YimMenu::NativeInvoker::Invoke<3301, Any, false>(p0); }
 	FORCEINLINE constexpr void _DOOR_SYSTEM_FORCE_SHUT(Hash doorHash, BOOL p1) { return YimMenu::NativeInvoker::Invoke<3302, void, false>(doorHash, p1); }
-	FORCEINLINE constexpr Any _0xEBA314768FB35D58(Any p0) { return YimMenu::NativeInvoker::Invoke<3303, Any, false>(p0); }
-	FORCEINLINE constexpr void _0x5230BF34EB0EC645(Any p0) { return YimMenu::NativeInvoker::Invoke<3304, void, false>(p0); }
+	FORCEINLINE constexpr Player _DOOR_SYSTEM_GET_FORCED_OPEN_PLAYER(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3303, Player, false>(doorHash); }
+	FORCEINLINE constexpr void _DOOR_SYSTEM_CLEAR_FORCED_OPEN_PLAYER(Hash doorHash) { return YimMenu::NativeInvoker::Invoke<3304, void, false>(doorHash); }
 	FORCEINLINE constexpr BOOL DOES_OBJECT_OF_TYPE_EXIST_AT_COORDS(float x, float y, float z, float radius, Hash hash, BOOL p5) { return YimMenu::NativeInvoker::Invoke<3305, BOOL, false>(x, y, z, radius, hash, p5); }
 	FORCEINLINE constexpr BOOL IS_POINT_IN_ANGLED_AREA(float p0, float p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float p9, BOOL p10, BOOL p11) { return YimMenu::NativeInvoker::Invoke<3306, BOOL, false>(p0, p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11); }
 	FORCEINLINE constexpr void SET_OBJECT_ALLOW_LOW_LOD_BUOYANCY(Object object, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3307, void, false>(object, toggle); }
@@ -10630,10 +10630,10 @@ namespace OBJECT
 	FORCEINLINE constexpr void SET_ACTIVATE_OBJECT_PHYSICS_AS_SOON_AS_IT_IS_UNFROZEN(Object object, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3311, void, false>(object, toggle); }
 	FORCEINLINE constexpr void BREAK_OBJECT_FRAGMENT_CHILD(Object object, Any p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<3312, void, false>(object, p1, p2); }
 	FORCEINLINE constexpr void BREAK_ALL_OBJECT_FRAGMENT_BONES(Object object) { return YimMenu::NativeInvoker::Invoke<3313, void, false>(object); }
-	FORCEINLINE constexpr void _0xAAACF33CBF9B990A(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3314, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _DAMAGE_OBJECT_FRAGMENT_BY_INDEX(Object object, int index) { return YimMenu::NativeInvoker::Invoke<3314, void, false>(object, index); }
 	FORCEINLINE constexpr void _DAMAGE_BONE_ON_PROP(Object object, int bone) { return YimMenu::NativeInvoker::Invoke<3315, void, false>(object, bone); }
 	FORCEINLINE constexpr void FIX_OBJECT_FRAGMENT(Object object) { return YimMenu::NativeInvoker::Invoke<3316, void, false>(object); }
-	FORCEINLINE constexpr Any _0x58DE624FA7FB0E7F(Any p0) { return YimMenu::NativeInvoker::Invoke<3317, Any, false>(p0); }
+	FORCEINLINE constexpr int _GET_OBJECT_FRAGMENT_COUNT(Object object) { return YimMenu::NativeInvoker::Invoke<3317, int, false>(object); }
 	FORCEINLINE constexpr void _0x491439AEF410A2FC(Any p0) { return YimMenu::NativeInvoker::Invoke<3318, void, false>(p0); }
 	FORCEINLINE constexpr void _SET_OBJECT_BREAK_SCALE(Object object, float scale) { return YimMenu::NativeInvoker::Invoke<3319, void, false>(object, scale); }
 	FORCEINLINE constexpr void _0xCEAB54F4632C6EF6(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3320, void, false>(p0, p1); }
@@ -10647,7 +10647,7 @@ namespace OBJECT
 	FORCEINLINE constexpr void _SET_LIGHT_INTENSITY_FOR_OBJECT(Object object, float lightIntensity) { return YimMenu::NativeInvoker::Invoke<3328, void, false>(object, lightIntensity); }
 	FORCEINLINE constexpr void _SET_LIGHT_TRANSLUCENCY_FOR_OBJECT(Object object, float value) { return YimMenu::NativeInvoker::Invoke<3329, void, false>(object, value); }
 	FORCEINLINE constexpr void _SET_LIGHT_SCATTERING_DISABLED_FOR_OBJECT(Object object, BOOL disable) { return YimMenu::NativeInvoker::Invoke<3330, void, false>(object, disable); }
-	FORCEINLINE constexpr void _0x7FCD49388BC9B775(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3331, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _SET_OBJECT_LANTERN_LIGHT_DISABLED(Object object, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3331, void, false>(object, toggle); }
 	FORCEINLINE constexpr Any _0xFA99E8E575F2FEF8(Any p0) { return YimMenu::NativeInvoker::Invoke<3332, Any, false>(p0); }
 	FORCEINLINE constexpr Object GET_RAYFIRE_MAP_OBJECT(float x, float y, float z, float radius, const char* name) { return YimMenu::NativeInvoker::Invoke<3333, Object, false>(x, y, z, radius, name); }
 	FORCEINLINE constexpr void SET_STATE_OF_RAYFIRE_MAP_OBJECT(Object object, int state) { return YimMenu::NativeInvoker::Invoke<3334, void, false>(object, state); }
@@ -10684,7 +10684,7 @@ namespace OBJECT
 	FORCEINLINE constexpr void SET_PICKUP_NOT_LOOTABLE(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3365, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _0x1F5E07E14A86FAFC(BOOL p0) { return YimMenu::NativeInvoker::Invoke<3366, void, false>(p0); }
 	FORCEINLINE constexpr void SET_TEAM_PICKUP_OBJECT(Object object, Any p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<3367, void, false>(object, p1, p2); }
-	FORCEINLINE constexpr Any _0x9F52AD67D1A91BAD(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3368, Any, false>(p0, p1); }
+	FORCEINLINE constexpr BOOL _IS_PICKUP_PICKABLE_FOR_TEAM(Object object, int teamId) { return YimMenu::NativeInvoker::Invoke<3368, BOOL, false>(object, teamId); }
 	FORCEINLINE constexpr void PREVENT_COLLECTION_OF_PORTABLE_PICKUP(Object object, BOOL p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<3369, void, false>(object, p1, p2); }
 	FORCEINLINE constexpr void SET_PICKUP_GENERATION_RANGE_MULTIPLIER(float multiplier) { return YimMenu::NativeInvoker::Invoke<3370, void, false>(multiplier); }
 	FORCEINLINE constexpr void SET_PICKUP_UNCOLLECTABLE(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<3371, void, false>(p0, p1); }
@@ -11032,11 +11032,11 @@ namespace PED
 	FORCEINLINE constexpr void SET_PED_INJURED_ON_GROUND_BEHAVIOUR(Ped ped, float unk) { return YimMenu::NativeInvoker::Invoke<3701, void, false>(ped, unk); }
 	FORCEINLINE constexpr void DISABLE_PED_INJURED_ON_GROUND_BEHAVIOUR(Ped ped) { return YimMenu::NativeInvoker::Invoke<3702, void, false>(ped); }
 	FORCEINLINE constexpr void _SET_STAGED_PED_FLAG(Ped ped) { return YimMenu::NativeInvoker::Invoke<3703, void, false>(ped); }
-	FORCEINLINE constexpr BOOL _0xFA8C10DCE0706D43(Ped ped) { return YimMenu::NativeInvoker::Invoke<3704, BOOL, false>(ped); }
+	FORCEINLINE constexpr BOOL _HAS_PED_KNOCKED_ON_DOOR(Ped ped) { return YimMenu::NativeInvoker::Invoke<3704, BOOL, false>(ped); }
 	FORCEINLINE constexpr void _SET_PED_ANIMAL_DETECTION_MODIFIER(Ped ped, float modifier) { return YimMenu::NativeInvoker::Invoke<3705, void, false>(ped, modifier); }
-	FORCEINLINE constexpr float _0x2BA9D7BF629F920C(Ped ped) { return YimMenu::NativeInvoker::Invoke<3706, float, false>(ped); }
+	FORCEINLINE constexpr float _GET_PED_SEEING_RANGE(Ped ped) { return YimMenu::NativeInvoker::Invoke<3706, float, false>(ped); }
 	FORCEINLINE constexpr void SET_PED_SEEING_RANGE(Ped ped, float value) { return YimMenu::NativeInvoker::Invoke<3707, void, false>(ped, value); }
-	FORCEINLINE constexpr float _0x900CA00CE703E1E2(Ped ped) { return YimMenu::NativeInvoker::Invoke<3708, float, false>(ped); }
+	FORCEINLINE constexpr float _GET_PED_HEARING_RANGE(Ped ped) { return YimMenu::NativeInvoker::Invoke<3708, float, false>(ped); }
 	FORCEINLINE constexpr void SET_PED_HEARING_RANGE(Ped ped, float value) { return YimMenu::NativeInvoker::Invoke<3709, void, false>(ped, value); }
 	FORCEINLINE constexpr void SET_PED_VISUAL_FIELD_MIN_ANGLE(Ped ped, float value) { return YimMenu::NativeInvoker::Invoke<3710, void, false>(ped, value); }
 	FORCEINLINE constexpr void SET_PED_VISUAL_FIELD_MAX_ANGLE(Ped ped, float value) { return YimMenu::NativeInvoker::Invoke<3711, void, false>(ped, value); }
@@ -11111,7 +11111,7 @@ namespace PED
 	FORCEINLINE constexpr int _0x3ACCE14DFA6BA8C2(Ped ped, int p1, float x, float y, float z, float p5, ItemSet itemset) { return YimMenu::NativeInvoker::Invoke<3780, int, false>(ped, p1, x, y, z, p5, itemset); }
 	FORCEINLINE constexpr void SET_PED_TO_INFORM_RESPECTED_FRIENDS(Ped ped, float radius, int maxFriends) { return YimMenu::NativeInvoker::Invoke<3781, void, false>(ped, radius, maxFriends); }
 	FORCEINLINE constexpr BOOL _0x40C9155AF8BC13F3(Ped ped) { return YimMenu::NativeInvoker::Invoke<3782, BOOL, false>(ped); }
-	FORCEINLINE constexpr int _0xF4860514AD354226(ScrHandle shockingEvent, float x, float y, float z, float p4, int* p5) { return YimMenu::NativeInvoker::Invoke<3783, int, false>(shockingEvent, x, y, z, p4, p5); }
+	FORCEINLINE constexpr int _COUNT_PEDS_AWARE_OF_EVENT(ScrHandle shockingEvent, float x, float y, float z, float radius, void* entities) { return YimMenu::NativeInvoker::Invoke<3783, int, false>(shockingEvent, x, y, z, radius, entities); }
 	FORCEINLINE constexpr BOOL IS_PED_RESPONDING_TO_EVENT(Ped ped, Hash eventType) { return YimMenu::NativeInvoker::Invoke<3784, BOOL, false>(ped, eventType); }
 	FORCEINLINE constexpr Entity _0x5E9FAF6C513347B4(Ped ped, Hash eventType) { return YimMenu::NativeInvoker::Invoke<3785, Entity, false>(ped, eventType); }
 	FORCEINLINE constexpr Any _0x326F7951EF0D7F75(Ped ped, Hash eventType) { return YimMenu::NativeInvoker::Invoke<3786, Any, false>(ped, eventType); }
@@ -11255,7 +11255,7 @@ namespace PED
 	FORCEINLINE constexpr void KNOCK_OFF_PED_PROP(Ped ped, BOOL p1, BOOL p2, BOOL p3, BOOL p4) { return YimMenu::NativeInvoker::Invoke<3924, void, false>(ped, p1, p2, p3, p4); }
 	FORCEINLINE constexpr void SET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Ped ped, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<3925, void, false>(ped, toggle); }
 	FORCEINLINE constexpr BOOL _GET_BLOCKING_OF_NON_TEMPORARY_EVENTS(Ped ped) { return YimMenu::NativeInvoker::Invoke<3926, BOOL, false>(ped); }
-	FORCEINLINE constexpr void _0xC17A94CC8FC3C61A(Entity entity, int boneId, float p2, float p3, float p4) { return YimMenu::NativeInvoker::Invoke<3927, void, false>(entity, boneId, p2, p3, p4); }
+	FORCEINLINE constexpr void _SET_PED_RAGDOLL_BONE_SCALE(Ped ped, int boneId, float scaleX, float scaleY, float scaleZ) { return YimMenu::NativeInvoker::Invoke<3927, void, false>(ped, boneId, scaleX, scaleY, scaleZ); }
 	FORCEINLINE constexpr void _SET_PED_SCALE(Ped ped, float scale) { return YimMenu::NativeInvoker::Invoke<3928, void, false>(ped, scale); }
 	FORCEINLINE constexpr float _0x134775B093AD5C38(Ped ped) { return YimMenu::NativeInvoker::Invoke<3929, float, false>(ped); }
 	FORCEINLINE constexpr float _GET_PED_HEIGHT(Ped ped) { return YimMenu::NativeInvoker::Invoke<3930, float, false>(ped); }
@@ -11410,8 +11410,8 @@ namespace PED
 	FORCEINLINE constexpr void _SET_PED_CAN_BE_LASSOED(Ped ped, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<4079, void, false>(ped, toggle); }
 	FORCEINLINE constexpr void SET_PED_COMBAT_MOVEMENT(Ped ped, int combatMovement) { return YimMenu::NativeInvoker::Invoke<4080, void, false>(ped, combatMovement); }
 	FORCEINLINE constexpr int GET_PED_COMBAT_MOVEMENT(Ped ped) { return YimMenu::NativeInvoker::Invoke<4081, int, false>(ped); }
-	FORCEINLINE constexpr void _0x815C0074A1BC0D93(Ped ped, int p1) { return YimMenu::NativeInvoker::Invoke<4082, void, false>(ped, p1); }
-	FORCEINLINE constexpr int _0xFFDE295662405B25(Ped ped) { return YimMenu::NativeInvoker::Invoke<4083, int, false>(ped); }
+	FORCEINLINE constexpr void _SET_PED_COMBAT_SPEED(Ped ped, int speed) { return YimMenu::NativeInvoker::Invoke<4082, void, false>(ped, speed); }
+	FORCEINLINE constexpr int _GET_PED_COMBAT_SPEED(Ped ped) { return YimMenu::NativeInvoker::Invoke<4083, int, false>(ped); }
 	FORCEINLINE constexpr void SET_PED_COMBAT_ABILITY(Ped ped, int abilityLevel) { return YimMenu::NativeInvoker::Invoke<4084, void, false>(ped, abilityLevel); }
 	FORCEINLINE constexpr void SET_PED_COMBAT_RANGE(Ped ped, int range) { return YimMenu::NativeInvoker::Invoke<4085, void, false>(ped, range); }
 	FORCEINLINE constexpr void SET_PED_COMBAT_ATTRIBUTES(Ped ped, int attributeIndex, BOOL enabled) { return YimMenu::NativeInvoker::Invoke<4086, void, false>(ped, attributeIndex, enabled); }
@@ -11437,7 +11437,7 @@ namespace PED
 	FORCEINLINE constexpr Hash _GET_PED_BRAWLING_STYLE(Ped ped) { return YimMenu::NativeInvoker::Invoke<4106, Hash, false>(ped); }
 	FORCEINLINE constexpr void _SET_PED_BRAWLING_STYLE(Ped ped, Hash brawlingStyle) { return YimMenu::NativeInvoker::Invoke<4107, void, false>(ped, brawlingStyle); }
 	FORCEINLINE constexpr void _0x9D8DFE2DE9CB4DFC(Ped ped) { return YimMenu::NativeInvoker::Invoke<4108, void, false>(ped); }
-	FORCEINLINE constexpr Any _0xC48AF420371C7407(Ped ped, Hash grapple) { return YimMenu::NativeInvoker::Invoke<4109, Any, false>(ped, grapple); }
+	FORCEINLINE constexpr BOOL _SET_PED_MELEE_ACTION(Ped ped, Hash actionHash) { return YimMenu::NativeInvoker::Invoke<4109, BOOL, false>(ped, actionHash); }
 	FORCEINLINE constexpr Any _0x5EFA8A3D8A60D662(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4110, Any, false>(p0, p1); }
 	FORCEINLINE constexpr Any _0x242EDF85D4E87B65(Any p0) { return YimMenu::NativeInvoker::Invoke<4111, Any, false>(p0); }
 	FORCEINLINE constexpr void _SET_PED_COMBAT_BEHAVIOUR(Ped ped, Hash behaviour) { return YimMenu::NativeInvoker::Invoke<4112, void, false>(ped, behaviour); }
@@ -11526,7 +11526,7 @@ namespace PED
 	FORCEINLINE constexpr float _COMPUTE_SPEED_FOR_PED_MOVE_BLEND_RATIO(Ped ped, float speed) { return YimMenu::NativeInvoker::Invoke<4195, float, false>(ped, speed); }
 	FORCEINLINE constexpr void _HORSE_AGITATE(Ped mount, BOOL kickOffRider) { return YimMenu::NativeInvoker::Invoke<4196, void, false>(mount, kickOffRider); }
 	FORCEINLINE constexpr void _0x413697EC260AABBF(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<4197, void, false>(p0, p1, p2); }
-	FORCEINLINE constexpr void _0xCAC43D060099EA72(Ped ped) { return YimMenu::NativeInvoker::Invoke<4198, void, false>(ped); }
+	FORCEINLINE constexpr void _HIDE_PED_REINS(Ped ped) { return YimMenu::NativeInvoker::Invoke<4198, void, false>(ped); }
 	FORCEINLINE constexpr void _0xC9151483CC06A414(Ped ped) { return YimMenu::NativeInvoker::Invoke<4199, void, false>(ped); }
 	FORCEINLINE constexpr void _0xAD3330E3C3E98007(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4200, void, false>(p0, p1); }
 	FORCEINLINE constexpr Any _0xB8E2D655E1D5BD39(Any p0) { return YimMenu::NativeInvoker::Invoke<4201, Any, false>(p0); }
@@ -11677,7 +11677,7 @@ namespace PED
 	FORCEINLINE constexpr BOOL _IS_META_PED_USING_COMPONENT(Ped ped, Hash component) { return YimMenu::NativeInvoker::Invoke<4346, BOOL, false>(ped, component); }
 	FORCEINLINE constexpr BOOL _0xBD0E4F52F6D95242(Ped ped) { return YimMenu::NativeInvoker::Invoke<4347, BOOL, false>(ped); }
 	FORCEINLINE constexpr BOOL _IS_PED_CHILD(Ped ped) { return YimMenu::NativeInvoker::Invoke<4348, BOOL, false>(ped); }
-	FORCEINLINE constexpr void _0xFFA1594703ED27CA(Ped ped, int p1) { return YimMenu::NativeInvoker::Invoke<4349, void, false>(ped, p1); }
+	FORCEINLINE constexpr void _SET_PED_VARIATION_PRESET(Ped ped, int variationIndex) { return YimMenu::NativeInvoker::Invoke<4349, void, false>(ped, variationIndex); }
 	FORCEINLINE constexpr void _SET_META_PED_TAG(Ped ped, Hash drawable, Hash albedo, Hash normal, Hash material, Hash palette, int tint0, int tint1, int tint2) { return YimMenu::NativeInvoker::Invoke<4350, void, false>(ped, drawable, albedo, normal, material, palette, tint0, tint1, tint2); }
 	FORCEINLINE constexpr void REMOVE_TAG_FROM_META_PED(Ped ped, Hash component, int p2) { return YimMenu::NativeInvoker::Invoke<4351, void, false>(ped, component, p2); }
 	FORCEINLINE constexpr void _0xA2B8E47442C76CEC(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4352, void, false>(p0, p1); }
@@ -11741,7 +11741,7 @@ namespace PED
 	FORCEINLINE constexpr void _CLEAR_PELT_FROM_HORSE(Ped horse, int peltId) { return YimMenu::NativeInvoker::Invoke<4410, void, false>(horse, peltId); }
 	FORCEINLINE constexpr void _SET_PED_LIGHTS(Ped ped, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<4411, void, false>(ped, toggle); }
 	FORCEINLINE constexpr void _0xD049FDAF089FDDB0(Ped ped, Hash p1, float p2) { return YimMenu::NativeInvoker::Invoke<4412, void, false>(ped, p1, p2); }
-	FORCEINLINE constexpr void _0xDD9540E7B1C9714F(Ped ped, Hash p1, float r, float g, float b) { return YimMenu::NativeInvoker::Invoke<4413, void, false>(ped, p1, r, g, b); }
+	FORCEINLINE constexpr void _SET_PED_LOCAL_VFX_COLOR(Ped ped, Hash vfxNodeHash, float r, float g, float b) { return YimMenu::NativeInvoker::Invoke<4413, void, false>(ped, vfxNodeHash, r, g, b); }
 	FORCEINLINE constexpr void _0x55546004A244302A(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4414, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _SET_HEALTH_RECHARGE_MULTIPLIER(Ped ped, int multiplier) { return YimMenu::NativeInvoker::Invoke<4415, void, false>(ped, multiplier); }
 	FORCEINLINE constexpr float _GET_HEALTH_RECHARGE_MULTIPLIER(Ped ped) { return YimMenu::NativeInvoker::Invoke<4416, float, false>(ped); }
@@ -12008,7 +12008,7 @@ namespace PHYSICS
 	FORCEINLINE constexpr void ROPE_FORCE_LENGTH(int ropeId, float length) { return YimMenu::NativeInvoker::Invoke<4665, void, false>(ropeId, length); }
 	FORCEINLINE constexpr void _0x8D59079C37C21D78(int ropeId, float p1) { return YimMenu::NativeInvoker::Invoke<4666, void, false>(ropeId, p1); }
 	FORCEINLINE constexpr void _0x814D453FCFDF119F(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<4667, void, false>(p0, p1, p2); }
-	FORCEINLINE constexpr void _0x1FC92BDBA1106BD2(int ropeId, float p1) { return YimMenu::NativeInvoker::Invoke<4668, void, false>(ropeId, p1); }
+	FORCEINLINE constexpr void _ROPE_SET_LENGTH_CHANGE_RATE(int ropeId, float lengthChangeRate) { return YimMenu::NativeInvoker::Invoke<4668, void, false>(ropeId, lengthChangeRate); }
 	FORCEINLINE constexpr void _0xDEDE679ED29DD4E7(int ropeId, BOOL p1) { return YimMenu::NativeInvoker::Invoke<4669, void, false>(ropeId, p1); }
 	FORCEINLINE constexpr void _0xF1EA2A881EB7F2CD(int ropeId, BOOL p1) { return YimMenu::NativeInvoker::Invoke<4670, void, false>(ropeId, p1); }
 	FORCEINLINE constexpr void _0x5A989B7EE3672A56(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4671, void, false>(p0, p1); }
@@ -12035,7 +12035,7 @@ namespace PLAYER
 	FORCEINLINE constexpr void SET_PLAYER_TEAM(Player player, int team, BOOL bRestrictToThisScript) { return YimMenu::NativeInvoker::Invoke<4688, void, false>(player, team, bRestrictToThisScript); }
 	FORCEINLINE constexpr const char* GET_PLAYER_NAME(Player player) { return YimMenu::NativeInvoker::Invoke<4689, const char*, false>(player); }
 	FORCEINLINE constexpr const char* _FORMAT_PLAYER_NAME_STRING(const char* string) { return YimMenu::NativeInvoker::Invoke<4690, const char*, false>(string); }
-	FORCEINLINE constexpr float GET_WANTED_LEVEL_RADIUS(int p0) { return YimMenu::NativeInvoker::Invoke<4691, float, false>(p0); }
+	FORCEINLINE constexpr float GET_WANTED_LEVEL_RADIUS(int wantedLevel) { return YimMenu::NativeInvoker::Invoke<4691, float, false>(wantedLevel); }
 	FORCEINLINE constexpr int GET_WANTED_LEVEL_THRESHOLD(int wantedLevel) { return YimMenu::NativeInvoker::Invoke<4692, int, false>(wantedLevel); }
 	FORCEINLINE constexpr void SET_PLAYER_WANTED_LEVEL(Player player, int wantedLevel, BOOL disableNoMission) { return YimMenu::NativeInvoker::Invoke<4693, void, false>(player, wantedLevel, disableNoMission); }
 	FORCEINLINE constexpr BOOL IS_PLAYER_WANTED_LEVEL_GREATER(Player player, int wantedLevel) { return YimMenu::NativeInvoker::Invoke<4694, BOOL, false>(player, wantedLevel); }
@@ -12083,7 +12083,7 @@ namespace PLAYER
 	FORCEINLINE constexpr BOOL IS_PLAYER_FREE_AIMING_AT_ENTITY(Player player, Entity entity) { return YimMenu::NativeInvoker::Invoke<4736, BOOL, false>(player, entity); }
 	FORCEINLINE constexpr BOOL GET_ENTITY_PLAYER_IS_FREE_AIMING_AT(Player player, Entity* entity) { return YimMenu::NativeInvoker::Invoke<4737, BOOL, false>(player, entity); }
 	FORCEINLINE constexpr void _0x3DAABE78A23694BC(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<4738, void, false>(p0, p1); }
-	FORCEINLINE constexpr BOOL _0x7AE93C45EC14A166(Player player, Ped* ped) { return YimMenu::NativeInvoker::Invoke<4739, BOOL, false>(player, ped); }
+	FORCEINLINE constexpr BOOL _GET_PLAYER_FREE_AIM_CLOSEST_ENTITY(Player player, Entity* entity) { return YimMenu::NativeInvoker::Invoke<4739, BOOL, false>(player, entity); }
 	FORCEINLINE constexpr void SET_PLAYER_LOCKON_RANGE_OVERRIDE(Player player, float range) { return YimMenu::NativeInvoker::Invoke<4740, void, false>(player, range); }
 	FORCEINLINE constexpr void SET_PLAYER_CAN_BE_HASSLED_BY_GANGS(Player player, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<4741, void, false>(player, toggle); }
 	FORCEINLINE constexpr void SET_PLAYER_CAN_USE_COVER(Player player, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<4742, void, false>(player, toggle); }
@@ -12418,7 +12418,7 @@ namespace PLAYER
 	FORCEINLINE constexpr void _FORCE_REST_SCENARIO(BOOL toggle) { return YimMenu::NativeInvoker::Invoke<5071, void, false>(toggle); }
 	FORCEINLINE constexpr BOOL _0x57028FD99886F6F9() { return YimMenu::NativeInvoker::Invoke<5072, BOOL, false>(); }
 	FORCEINLINE constexpr void _0x35A33783EC3C3448(Any p0) { return YimMenu::NativeInvoker::Invoke<5073, void, false>(p0); }
-	FORCEINLINE constexpr void _0x39D8D7082BC34B72(Any p0) { return YimMenu::NativeInvoker::Invoke<5074, void, false>(p0); }
+	FORCEINLINE constexpr void _SET_WANTED_COOLDOWN(int ms) { return YimMenu::NativeInvoker::Invoke<5074, void, false>(ms); }
 	FORCEINLINE constexpr void _0x1AD8AD999C27F44A(Any p0) { return YimMenu::NativeInvoker::Invoke<5075, void, false>(p0); }
 }
 
@@ -12882,7 +12882,7 @@ namespace STREAMING
 	FORCEINLINE constexpr BOOL IS_IPL_ACTIVE_HASH(Hash iplHash) { return YimMenu::NativeInvoker::Invoke<5479, BOOL, false>(iplHash); }
 	FORCEINLINE constexpr BOOL IS_IPL_ACTIVE_BY_HASH(Hash iplHash) { return YimMenu::NativeInvoker::Invoke<5480, BOOL, false>(iplHash); }
 	FORCEINLINE constexpr BOOL _IS_POSITION_INSIDE_IPL_STREAMING_EXTENTS(Hash iplHash, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<5481, BOOL, false>(iplHash, x, y, z); }
-	FORCEINLINE constexpr void _0xDEEE1F265B7ECEF5() { return YimMenu::NativeInvoker::Invoke<5482, void, false>(); }
+	FORCEINLINE constexpr void _REMOVE_ALL_IPLS() { return YimMenu::NativeInvoker::Invoke<5482, void, false>(); }
 	FORCEINLINE constexpr void SET_GAME_PAUSES_FOR_STREAMING(BOOL toggle) { return YimMenu::NativeInvoker::Invoke<5483, void, false>(toggle); }
 	FORCEINLINE constexpr int GET_NUMBER_OF_STREAMING_REQUESTS() { return YimMenu::NativeInvoker::Invoke<5484, int, false>(); }
 	FORCEINLINE constexpr void REQUEST_PTFX_ASSET() { return YimMenu::NativeInvoker::Invoke<5485, void, false>(); }
@@ -13216,7 +13216,7 @@ namespace TASK
 	FORCEINLINE constexpr void _0x7FB78B2199C10E92(Any p0) { return YimMenu::NativeInvoker::Invoke<5809, void, false>(p0); }
 	FORCEINLINE constexpr void TASK_GUARD(Ped ped, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<5810, void, false>(ped, p1, p2); }
 	FORCEINLINE constexpr void TASK_GUARD_CURRENT_POSITION(Ped ped, float p1, float p2, BOOL p3) { return YimMenu::NativeInvoker::Invoke<5811, void, false>(ped, p1, p2, p3); }
-	FORCEINLINE constexpr void _TASK_GUARD_ASSIGNED_DEFENSIVE_AREA_2(Ped ped, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6, Any p7) { return YimMenu::NativeInvoker::Invoke<5812, void, false>(ped, p1, p2, p3, p4, p5, p6, p7); }
+	FORCEINLINE constexpr void _TASK_GUARD_DEFENSIVE_AREA(Ped ped, Volume volume, float x, float y, float z, float heading, float patrolProximity, int duration) { return YimMenu::NativeInvoker::Invoke<5812, void, false>(ped, volume, x, y, z, heading, patrolProximity, duration); }
 	FORCEINLINE constexpr void TASK_GUARD_ASSIGNED_DEFENSIVE_AREA(Ped ped, float p1, float p2, float p3, float p4, float p5, Any p6) { return YimMenu::NativeInvoker::Invoke<5813, void, false>(ped, p1, p2, p3, p4, p5, p6); }
 	FORCEINLINE constexpr void TASK_STAND_GUARD(Ped ped, float x, float y, float z, float heading, const char* scenarioName) { return YimMenu::NativeInvoker::Invoke<5814, void, false>(ped, x, y, z, heading, scenarioName); }
 	FORCEINLINE constexpr void SET_DRIVE_TASK_CRUISE_SPEED(Ped driver, float cruiseSpeed) { return YimMenu::NativeInvoker::Invoke<5815, void, false>(driver, cruiseSpeed); }
@@ -13511,7 +13511,7 @@ namespace TASK
 	FORCEINLINE constexpr void TASK_PICKUP_CARRIABLE_ENTITY(Ped ped, Entity entity) { return YimMenu::NativeInvoker::Invoke<6104, void, false>(ped, entity); }
 	FORCEINLINE constexpr void TASK_HOGTIE_TARGET_PED(Ped ped, Ped targetPed) { return YimMenu::NativeInvoker::Invoke<6105, void, false>(ped, targetPed); }
 	FORCEINLINE constexpr void _TASK_CUT_FREE_HOGTIED_TARGET_PED(Ped ped, Ped targetPed) { return YimMenu::NativeInvoker::Invoke<6106, void, false>(ped, targetPed); }
-	FORCEINLINE constexpr void _TASK_CUT_FREE_HOGTIED_TARGET_PED_2(Ped ped, Ped targetPed, float p2) { return YimMenu::NativeInvoker::Invoke<6107, void, false>(ped, targetPed, p2); }
+	FORCEINLINE constexpr void _TASK_CUT_FREE_HOGTIED_TARGET_PED_EX(Ped ped, Ped targetPed, float p2) { return YimMenu::NativeInvoker::Invoke<6107, void, false>(ped, targetPed, p2); }
 	FORCEINLINE constexpr void _SET_HOGTIE_ESCAPE_TIMER(Ped ped, float time) { return YimMenu::NativeInvoker::Invoke<6108, void, false>(ped, time); }
 	FORCEINLINE constexpr float _GET_HOGTIE_ESCAPE_TIMER(Ped ped) { return YimMenu::NativeInvoker::Invoke<6109, float, false>(ped); }
 	FORCEINLINE constexpr float _GET_PED_WRITHE_BREAK_FREE_PROGRESS(Ped ped) { return YimMenu::NativeInvoker::Invoke<6110, float, false>(ped); }
@@ -13890,7 +13890,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _HIDE_HORSE_REINS(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6431, void, false>(vehicle); }
 	FORCEINLINE constexpr void _SHOW_HORSE_REINS(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6432, void, false>(vehicle); }
 	FORCEINLINE constexpr void _0xD21A3D421E7F09F7(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6433, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0xA13028E22564A1BD(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6434, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _SET_VEHICLE_STOP_DISTANCE_BUFFER(Vehicle vehicle, float bufferDistance) { return YimMenu::NativeInvoker::Invoke<6434, void, false>(vehicle, bufferDistance); }
 	FORCEINLINE constexpr void _0x485B05EF05B9AEE9(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6435, void, false>(p0, p1); }
 	FORCEINLINE constexpr void SET_BOAT_ANCHOR(Vehicle vehicle, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6436, void, false>(vehicle, toggle); }
 	FORCEINLINE constexpr void _0x6B53F4B811E583D2(Vehicle vehicle, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6437, void, false>(vehicle, toggle); }
@@ -13913,7 +13913,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr BOOL _IS_VEHICLE_BROUGHT_TO_HALT(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6454, BOOL, false>(vehicle); }
 	FORCEINLINE constexpr void STOP_BRINGING_VEHICLE_TO_HALT(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6455, void, false>(vehicle); }
 	FORCEINLINE constexpr void _0xE12F5ED49F44D40D(Any p0) { return YimMenu::NativeInvoker::Invoke<6456, void, false>(p0); }
-	FORCEINLINE constexpr void _0xF6E3D38869D0F7AD(Any p0) { return YimMenu::NativeInvoker::Invoke<6457, void, false>(p0); }
+	FORCEINLINE constexpr void _SET_CARGO_COMPARTMENT_OPEN(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6457, void, false>(vehicle); }
 	FORCEINLINE constexpr void SET_VEHICLE_DOORS_SHUT(Vehicle vehicle, BOOL closeInstantly) { return YimMenu::NativeInvoker::Invoke<6458, void, false>(vehicle, closeInstantly); }
 	FORCEINLINE constexpr void SET_VEHICLE_TYRES_CAN_BURST(Vehicle vehicle, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6459, void, false>(vehicle, toggle); }
 	FORCEINLINE constexpr void SET_VEHICLE_WHEELS_CAN_BREAK(Vehicle vehicle, BOOL enabled) { return YimMenu::NativeInvoker::Invoke<6460, void, false>(vehicle, enabled); }
@@ -13932,7 +13932,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _0x15206E88FF7617DF(int trackIndex, float p1) { return YimMenu::NativeInvoker::Invoke<6473, void, false>(trackIndex, p1); }
 	FORCEINLINE constexpr void _0xA7966807953A18EE(int trackIndex, float p1) { return YimMenu::NativeInvoker::Invoke<6474, void, false>(trackIndex, p1); }
 	FORCEINLINE constexpr void _0x6B34BE961F639E21(int trackIndex, int p1) { return YimMenu::NativeInvoker::Invoke<6475, void, false>(trackIndex, p1); }
-	FORCEINLINE constexpr void _0xE6BD7DD3FD474415(Vehicle train, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6476, void, false>(train, p1); }
+	FORCEINLINE constexpr void _SET_TRAIN_COLLISION_AVOIDANCE_ENABLED(Vehicle train, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6476, void, false>(train, toggle); }
 	FORCEINLINE constexpr void _0x615B3B8E73634509(int trackIndex, float p1) { return YimMenu::NativeInvoker::Invoke<6477, void, false>(trackIndex, p1); }
 	FORCEINLINE constexpr void _0x38E7DD70A242D5CB(int trackIndex, int p1) { return YimMenu::NativeInvoker::Invoke<6478, void, false>(trackIndex, p1); }
 	FORCEINLINE constexpr void _0x63509DDF102E08E8(int trackIndex, int p1) { return YimMenu::NativeInvoker::Invoke<6479, void, false>(trackIndex, p1); }
@@ -13947,7 +13947,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _0x0D5FDF0D36FA10CD(int trackIndex) { return YimMenu::NativeInvoker::Invoke<6488, void, false>(trackIndex); }
 	FORCEINLINE constexpr void _0xE682002DB1F30669(Any p0) { return YimMenu::NativeInvoker::Invoke<6489, void, false>(p0); }
 	FORCEINLINE constexpr void _0x718EB706B6E998A0(int trackIndex) { return YimMenu::NativeInvoker::Invoke<6490, void, false>(trackIndex); }
-	FORCEINLINE constexpr BOOL _0xF05DFAF1ADFEF2CD(Hash trainConfig, float x, float y, float z, BOOL direction, BOOL p5) { return YimMenu::NativeInvoker::Invoke<6491, BOOL, false>(trainConfig, x, y, z, direction, p5); }
+	FORCEINLINE constexpr BOOL _IS_POSITION_VALID_FOR_TRAIN(Hash trainConfig, float x, float y, float z, BOOL direction, BOOL p5) { return YimMenu::NativeInvoker::Invoke<6491, BOOL, false>(trainConfig, x, y, z, direction, p5); }
 	FORCEINLINE constexpr Any _0xD1DF5E54F4ACBE1A(Any p0, Any p1, Any p2, Any p3, Any p4, Any p5, Any p6) { return YimMenu::NativeInvoker::Invoke<6492, Any, false>(p0, p1, p2, p3, p4, p5, p6); }
 	FORCEINLINE constexpr Any _0x0FDDEE66E3465726(Any p0) { return YimMenu::NativeInvoker::Invoke<6493, Any, false>(p0); }
 	FORCEINLINE constexpr void _0x4C05B42A8D937796() { return YimMenu::NativeInvoker::Invoke<6494, void, false>(); }
@@ -14134,8 +14134,8 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _0xCBF88256E44D5D39(Vehicle vehicle, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6675, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr void _0xC325A6BAA62CF8A2(Vehicle vehicle, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6676, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr void _0x0CD7914D17A970AB(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6677, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0x23F66C36F8E5EAAB(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6678, void, false>(p0, p1); }
-	FORCEINLINE constexpr void _0x697DF68F3A761A50(Any p0) { return YimMenu::NativeInvoker::Invoke<6679, void, false>(p0); }
+	FORCEINLINE constexpr void _BALLOON_ATTACH_CHAIN_TO_PILOT(Vehicle balloon, BOOL attachToLeftHand) { return YimMenu::NativeInvoker::Invoke<6678, void, false>(balloon, attachToLeftHand); }
+	FORCEINLINE constexpr void _BALLOON_DETACH_CHAIN_FROM_PILOT(Vehicle balloon) { return YimMenu::NativeInvoker::Invoke<6679, void, false>(balloon); }
 	FORCEINLINE constexpr void _0x27E3F2B57209FA54(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6680, void, false>(p0, p1); }
 	FORCEINLINE constexpr void DISABLE_VEHICLE_WEAPON(BOOL disabled, Hash weaponHash, Vehicle vehicle, Ped owner) { return YimMenu::NativeInvoker::Invoke<6681, void, false>(disabled, weaponHash, vehicle, owner); }
 	FORCEINLINE constexpr void SET_VEHICLE_CAN_BE_USED_BY_FLEEING_PEDS(Vehicle vehicle, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6682, void, false>(vehicle, toggle); }
@@ -14165,16 +14165,16 @@ namespace VEHICLE
 	FORCEINLINE constexpr Ped GET_DRIVER_OF_VEHICLE(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6706, Ped, false>(vehicle); }
 	FORCEINLINE constexpr void _SET_FORCE_COACH_ROBBERY_LOOT(Vehicle vehicle, Hash coachrobberyLoot) { return YimMenu::NativeInvoker::Invoke<6707, void, false>(vehicle, coachrobberyLoot); }
 	FORCEINLINE constexpr Entity _GET_BALLOON_OBJECT_FROM_VEHICLE(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6708, Entity, false>(vehicle); }
-	FORCEINLINE constexpr void _0x2200AB13CBD10F4E(Vehicle vehicle, float x, float y, float z, BOOL p4, float p5) { return YimMenu::NativeInvoker::Invoke<6709, void, false>(vehicle, x, y, z, p4, p5); }
-	FORCEINLINE constexpr void _0xB42C87521D1BDD2F(Vehicle vehicle, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<6710, void, false>(vehicle, x, y, z); }
+	FORCEINLINE constexpr void _SET_BALLOON_GO_TO_COORD(Vehicle balloon, float x, float y, float z, BOOL autoPower, float speed) { return YimMenu::NativeInvoker::Invoke<6709, void, false>(balloon, x, y, z, autoPower, speed); }
+	FORCEINLINE constexpr void _SET_BALLOON_FACE_COORD(Vehicle balloon, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<6710, void, false>(balloon, x, y, z); }
 	FORCEINLINE constexpr void _0xC351394B932A6A50(Any p0) { return YimMenu::NativeInvoker::Invoke<6711, void, false>(p0); }
 	FORCEINLINE constexpr void _0x172E9DD35858DCD7(Any p0) { return YimMenu::NativeInvoker::Invoke<6712, void, false>(p0); }
 	FORCEINLINE constexpr int _GET_BREAKABLE_VEHICLE_LOCKS_STATE(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6713, int, false>(vehicle); }
-	FORCEINLINE constexpr Any _0x877EA24EB1614495(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<6714, Any, false>(p0, p1, p2); }
+	FORCEINLINE constexpr BOOL _DETERMINE_VEHICLE_COMPARTMENT_STATE(void* outState, Vehicle vehicle, Ped ped) { return YimMenu::NativeInvoker::Invoke<6714, BOOL, false>(outState, vehicle, ped); }
 	FORCEINLINE constexpr Object _GET_BREAKABLE_VEHICLE_LOCK_OBJECT(Vehicle vehicle, int index) { return YimMenu::NativeInvoker::Invoke<6715, Object, false>(vehicle, index); }
 	FORCEINLINE constexpr int _GET_NUM_BREAKABLE_VEHICLE_LOCK_OBJECTS(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6716, int, false>(vehicle); }
 	FORCEINLINE constexpr void SET_BREAKABLE_VEHICLE_LOCKS_UNBREAKABLE(Vehicle vehicle, BOOL toggle) { return YimMenu::NativeInvoker::Invoke<6717, void, false>(vehicle, toggle); }
-	FORCEINLINE constexpr void _0x9D12796EF4BF9EA9(Any p0) { return YimMenu::NativeInvoker::Invoke<6718, void, false>(p0); }
+	FORCEINLINE constexpr void _BREAK_LOCKS_ON_VEHICLE(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6718, void, false>(vehicle); }
 	FORCEINLINE constexpr void _0x850CE59DEC2028F3(Vehicle vehicle, Any p1) { return YimMenu::NativeInvoker::Invoke<6719, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr void _0x0355FE37240E2C77(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6720, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _0x3D86997A86FEEF0D(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6721, void, false>(p0, p1); }
@@ -14202,11 +14202,11 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _0xFC4F15A7DDDC47B1(Vehicle vehicle, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6743, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr void _0x4C60C333F9CCA2B6(Vehicle vehicle, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6744, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr void _0xCF342503CA4C8DF1(Vehicle vehicle, float p1) { return YimMenu::NativeInvoker::Invoke<6745, void, false>(vehicle, p1); }
-	FORCEINLINE constexpr void _0x06A09A6E0C6D2A84(Vehicle train, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6746, void, false>(train, p1); }
+	FORCEINLINE constexpr void _SET_TRAIN_REVERSE_ENABLED(Vehicle train, BOOL enable) { return YimMenu::NativeInvoker::Invoke<6746, void, false>(train, enable); }
 	FORCEINLINE constexpr void _0xAE7E66A61E7C17A5(Vehicle train, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6747, void, false>(train, p1); }
 	FORCEINLINE constexpr void _0xEF28A614B4B264B8(Vehicle train, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6748, void, false>(train, p1); }
 	FORCEINLINE constexpr void _0x04F0579DBDD32F34(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6749, void, false>(vehicle); }
-	FORCEINLINE constexpr void _0x12F6C6ED3EFF42DE(Vehicle vehicle, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<6750, void, false>(vehicle, x, y, z); }
+	FORCEINLINE constexpr void _SET_VELOCITY_FOR_BALLOON(Vehicle balloon, float x, float y, float z) { return YimMenu::NativeInvoker::Invoke<6750, void, false>(balloon, x, y, z); }
 	FORCEINLINE constexpr void _0x87B974E54C71BA7B(Vehicle vehicle, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6751, void, false>(vehicle, p1); }
 	FORCEINLINE constexpr BOOL _HAS_TRAIN_LOADED(Vehicle train) { return YimMenu::NativeInvoker::Invoke<6752, BOOL, false>(train); }
 	FORCEINLINE constexpr Vehicle _CREATE_MISSION_TRAIN(Hash configHash, float x, float y, float z, BOOL direction, BOOL passengers, BOOL p6, BOOL conductor) { return YimMenu::NativeInvoker::Invoke<6753, Vehicle, false>(configHash, x, y, z, direction, passengers, p6, conductor); }
@@ -14219,7 +14219,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr Any _0xF57DB8E83DCD8349(Any p0) { return YimMenu::NativeInvoker::Invoke<6760, Any, false>(p0); }
 	FORCEINLINE constexpr void _SET_BALLOON_HOVER_STATE(Vehicle balloon, float p1) { return YimMenu::NativeInvoker::Invoke<6761, void, false>(balloon, p1); }
 	FORCEINLINE constexpr void _SET_DRAFT_VEHICLE_ALLOW_DRAFT_ANIMAL_AUTO_CREATION(Vehicle vehicle, BOOL allow) { return YimMenu::NativeInvoker::Invoke<6762, void, false>(vehicle, allow); }
-	FORCEINLINE constexpr void _0x6835AFEA10E186F4(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6763, void, false>(p0, p1); }
+	FORCEINLINE constexpr void _SET_OARS_ROWING_SPEED(Vehicle boat, int speed) { return YimMenu::NativeInvoker::Invoke<6763, void, false>(boat, speed); }
 	FORCEINLINE constexpr void _SET_DRAFT_ANIMAL_RANDOM_SEED(Vehicle vehicle, int seed) { return YimMenu::NativeInvoker::Invoke<6764, void, false>(vehicle, seed); }
 	FORCEINLINE constexpr Any _0x14DA8C4BC2CCD90A(Any p0) { return YimMenu::NativeInvoker::Invoke<6765, Any, false>(p0); }
 	FORCEINLINE constexpr Any _0xCACAB2B123BBDBD6(Any p0, Any p1, Any p2) { return YimMenu::NativeInvoker::Invoke<6766, Any, false>(p0, p1, p2); }
@@ -14230,7 +14230,7 @@ namespace VEHICLE
 	FORCEINLINE constexpr void _SET_TRAIN_DESTRUCTION_ENABLED(Vehicle train, BOOL enabled) { return YimMenu::NativeInvoker::Invoke<6771, void, false>(train, enabled); }
 	FORCEINLINE constexpr void _SET_VEHICLE_ROAD_LINK_FORCED(Vehicle vehicle, float startX, float startY, float startZ, float endX, float endY, float endZ) { return YimMenu::NativeInvoker::Invoke<6772, void, false>(vehicle, startX, startY, startZ, endX, endY, endZ); }
 	FORCEINLINE constexpr void _0x873AAF600CC36DAC(Any p0) { return YimMenu::NativeInvoker::Invoke<6773, void, false>(p0); }
-	FORCEINLINE constexpr Any _0x51C7694E140FAE43(Any p0) { return YimMenu::NativeInvoker::Invoke<6774, Any, false>(p0); }
+	FORCEINLINE constexpr BOOL _IS_VEHICLE_TOUCHING_VEGETATION(Vehicle vehicle) { return YimMenu::NativeInvoker::Invoke<6774, BOOL, false>(vehicle); }
 	FORCEINLINE constexpr void _0x8DECD262602548B9(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6775, void, false>(p0, p1); }
 	FORCEINLINE constexpr void _0xCBC7B6F9A56B79F6(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6776, void, false>(p0, p1); }
 	FORCEINLINE constexpr BOOL _0x37D238BE69F7378A(int trackIndex) { return YimMenu::NativeInvoker::Invoke<6777, BOOL, false>(trackIndex); }
@@ -14424,7 +14424,7 @@ namespace WEAPON
 	FORCEINLINE constexpr Entity GET_CURRENT_PED_WEAPON_ENTITY_INDEX(Ped ped, int attachPoint) { return YimMenu::NativeInvoker::Invoke<6949, Entity, false>(ped, attachPoint); }
 	FORCEINLINE constexpr BOOL _ENABLE_WEAPON_RESTORE(Ped ped) { return YimMenu::NativeInvoker::Invoke<6950, BOOL, false>(ped); }
 	FORCEINLINE constexpr Hash GET_PED_BACKUP_WEAPON(Ped ped, BOOL p1) { return YimMenu::NativeInvoker::Invoke<6951, Hash, false>(ped, p1); }
-	FORCEINLINE constexpr Any _0x486C96A0DCD2BC92(Any p0, Any p1) { return YimMenu::NativeInvoker::Invoke<6952, Any, false>(p0, p1); }
+	FORCEINLINE constexpr BOOL _IS_PED_CARRYING_BACKUP_WEAPON(Ped ped, int attachPoint) { return YimMenu::NativeInvoker::Invoke<6952, BOOL, false>(ped, attachPoint); }
 	FORCEINLINE constexpr Hash _GET_PED_WORST_WEAPON(Ped ped, BOOL p1, BOOL p2, BOOL p3) { return YimMenu::NativeInvoker::Invoke<6953, Hash, false>(ped, p1, p2, p3); }
 	FORCEINLINE constexpr Hash GET_BEST_PED_WEAPON(Ped ped, BOOL p1, BOOL p2) { return YimMenu::NativeInvoker::Invoke<6954, Hash, false>(ped, p1, p2); }
 	FORCEINLINE constexpr Any _GET_BEST_PED_WEAPON_IN_INVENTORY(Ped ped, Any p1, void* guidPrimary) { return YimMenu::NativeInvoker::Invoke<6955, Any, false>(ped, p1, guidPrimary); }
@@ -14589,7 +14589,7 @@ namespace WEAPON
 	FORCEINLINE constexpr void _0x000FA7A4A8443AF7(Any p0) { return YimMenu::NativeInvoker::Invoke<7114, void, false>(p0); }
 	FORCEINLINE constexpr void _0xECBB26529A737EF6(Any p0) { return YimMenu::NativeInvoker::Invoke<7115, void, false>(p0); }
 	FORCEINLINE constexpr int _GET_WEAPON_ATTACH_POINT(Ped ped, int attachPoint) { return YimMenu::NativeInvoker::Invoke<7116, int, false>(ped, attachPoint); }
-	FORCEINLINE constexpr int _GET_AMMO_IN_PED_WEAPON_FROM_GUID(Ped ped, void* guid) { return YimMenu::NativeInvoker::Invoke<7117, int, false>(ped, guid); }
+	FORCEINLINE constexpr int _GET_AMMO_IN_PED_WEAPON_FROM_GUID(Ped ped, void* itemGuid) { return YimMenu::NativeInvoker::Invoke<7117, int, false>(ped, itemGuid); }
 	FORCEINLINE constexpr void SET_CURRENT_PED_WEAPON_BY_GUID(Ped ped, void* weaponUid, BOOL p2, BOOL p3, BOOL p4, BOOL p5) { return YimMenu::NativeInvoker::Invoke<7118, void, false>(ped, weaponUid, p2, p3, p4, p5); }
 	FORCEINLINE constexpr void SET_PLAYER_PED_QUICK_SWAP_WEAPON_BY_GUID(Ped ped, void* guidPrimary, void* guidSecondary) { return YimMenu::NativeInvoker::Invoke<7119, void, false>(ped, guidPrimary, guidSecondary); }
 	FORCEINLINE constexpr void _GET_PLAYER_PED_QUICK_SWAP_WEAPON_BY_GUID(Ped ped, void* guidPrimary, void* guidSecondary) { return YimMenu::NativeInvoker::Invoke<7120, void, false>(ped, guidPrimary, guidSecondary); }

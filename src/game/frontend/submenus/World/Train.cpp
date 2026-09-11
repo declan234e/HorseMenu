@@ -68,7 +68,7 @@ namespace YimMenu::Submenus
 
 
 					auto veh = VEHICLE::_CREATE_MISSION_TRAIN(selectedTrain, coords.x, coords.y, coords.z, 1, hasPax, true, hasConductor);
-					VEHICLE::_0x06A09A6E0C6D2A84(veh, false);
+					VEHICLE::_SET_TRAIN_REVERSE_ENABLED(veh, false);
 					VEHICLE::_SET_TRAIN_STOPS_FOR_STATIONS(veh, stopsForStations);
 					NETWORK::SET_NETWORK_ID_EXISTS_ON_ALL_MACHINES(NETWORK::VEH_TO_NET(veh), true);
 

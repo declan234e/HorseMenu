@@ -5,7 +5,7 @@
 #include "game/rdr/HerbSp.hpp"
 #include <map>
 
-#define HERB(id, name) {"COMPOSITE_LOOTABLE_" id "_DEF"_J, name}
+#define HERB(id, name) {name, "COMPOSITE_LOOTABLE_" id "_DEF"_J}
 
 namespace YimMenu::Submenus
 {
@@ -16,57 +16,61 @@ namespace YimMenu::Submenus
 
 		ImGui::PushID("herbspawn"_J);
 
-		static const std::map<Hash, std::string> herbTranslations = {
+		static const std::map<std::string, Hash> herbTranslations = {
 		    HERB("ALASKAN_GINSENG_ROOT", "Alaskan Ginseng"),
-		    HERB("AMERICAN_GINSENG_ROOT"_J, "American Ginseng"),
-		    HERB("BAY_BOLETE"_J, "Bay Bolete"),
-		    HERB("BLACK_BERRY"_J, "Black Berry"),
-		    HERB("BLACK_CURRANT"_J, "Black Currant"),
-		    HERB("BURDOCK_ROOT"_J, "Burdock Root"),
-		    HERB("CHANTERELLES"_J, "Chanterelles"),
-		    HERB("COMMON_BULRUSH"_J, "Common Bulrush"),
-		    HERB("CREEPING_THYME"_J, "Creeping Thyme"),
-		    HERB("DESERT_SAGE"_J, "Desert Sage"),
-		    HERB("ENGLISH_MACE"_J, "English Mace"),
-		    HERB("EVERGREEN_HUCKLEBERRY"_J, "Evergreen Huckleberry"),
-		    HERB("GOLDEN_CURRANT"_J, "Golden Currant"),
-		    HERB("HUMMINGBIRD_SAGE"_J, "Hummingbird Sage"),
-		    HERB("INDIAN_TOBACCO"_J, "Indian Tobacco"),
-		    HERB("MILKWEED"_J, "Milkweed"),
-		    HERB("OLEANDER_SAGE"_J, "Oleander Sage"),
-		    HERB("OREGANO"_J, "Oregano"),
-		    HERB("PARASOL_MUSHROOM"_J, "Parasol Mushroom"),
-		    HERB("PRAIRIE_POPPY"_J, "Prairie Poppy"),
-		    HERB("RAMS_HEAD"_J, "Rams Head"),
-		    HERB("RED_RASPBERRY"_J, "Red Raspberry"),
-		    HERB("RED_SAGE"_J, "Red Sage"),
-		    HERB("ORCHID_VANILLA"_J, "Vanilla Flower"),
-		    HERB("VIOLET_SNOWDROP"_J, "Violet Snowdrop"),
-		    HERB("WILD_CARROT"_J, "Wild Carrots"),
-		    HERB("WILD_FEVERFEW"_J, "Wild Feverfew"),
-		    HERB("WILD_MINT"_J, "Wild Mint"),
-		    HERB("WINTERGREEN_BERRY"_J, "Wintergreen Berry"),
-		    HERB("YARROW"_J, "Yarrow"),
-		    HERB("ORCHID_ACUNA_STAR"_J, "Acuna's Star Orchid"),
-		    HERB("ORCHID_CIGAR"_J, "Cigar Orchid"),
-		    HERB("ORCHID_CLAM_SHELL"_J, "Clam Shell Orchid"),
-		    HERB("ORCHID_DRAGONS"_J, "Dragon's Mouth Orchid"),
-		    HERB("ORCHID_GHOST"_J, "Ghost Orchid"),
-		    HERB("ORCHID_LADY_NIGHT"_J, "Lady of the Night Orchid"),
-		    HERB("ORCHID_LADY_SLIPPER"_J, "Lady Slipper Orchid"),
-		    HERB("ORCHID_MOCCASIN"_J, "Moccasin Orchid"),
-		    HERB("ORCHID_NIGHT_SCENTED"_J, "Night Scented Orchid"),
-		    HERB("ORCHID_QUEENS"_J, "Queen's Orchid"),
-		    HERB("ORCHID_RAT_TAIL"_J, "Rat Tail Orchid"),
-		    HERB("ORCHID_SPARROWS"_J, "Sparrow's Egg Orchid"),
-		    HERB("ORCHID_SPIDER"_J, "Spider Orchid"),
+		    HERB("AMERICAN_GINSENG_ROOT", "American Ginseng"),
+		    HERB("BAY_BOLETE", "Bay Bolete"),
+		    HERB("BLACK_BERRY", "Black Berry"),
+		    HERB("BLACK_CURRANT", "Black Currant"),
+		    HERB("BURDOCK_ROOT", "Burdock Root"),
+		    HERB("CHANTERELLES", "Chanterelles"),
+		    HERB("COMMON_BULRUSH", "Common Bulrush"),
+		    HERB("CREEPING_THYME", "Creeping Thyme"),
+		    HERB("DESERT_SAGE", "Desert Sage"),
+		    HERB("ENGLISH_MACE", "English Mace"),
+		    HERB("EVERGREEN_HUCKLEBERRY", "Evergreen Huckleberry"),
+		    HERB("GOLDEN_CURRANT", "Golden Currant"),
+		    HERB("HUMMINGBIRD_SAGE", "Hummingbird Sage"),
+		    HERB("INDIAN_TOBACCO", "Indian Tobacco"),
+		    HERB("MILKWEED", "Milkweed"),
+		    HERB("OLEANDER_SAGE", "Oleander Sage"),
+		    HERB("OREGANO", "Oregano"),
+		    HERB("PARASOL_MUSHROOM", "Parasol Mushroom"),
+		    HERB("PRAIRIE_POPPY", "Prairie Poppy"),
+		    HERB("RAMS_HEAD", "Rams Head"),
+		    HERB("RED_RASPBERRY", "Red Raspberry"),
+		    HERB("RED_SAGE", "Red Sage"),
+		    HERB("ORCHID_VANILLA", "Vanilla Flower"),
+		    HERB("VIOLET_SNOWDROP", "Violet Snowdrop"),
+		    HERB("WILD_CARROT", "Wild Carrots"),
+		    HERB("WILD_FEVERFEW", "Wild Feverfew"),
+		    HERB("WILD_MINT", "Wild Mint"),
+		    HERB("WINTERGREEN_BERRY", "Wintergreen Berry"),
+		    HERB("YARROW", "Yarrow"),
+		    HERB("ORCHID_ACUNA_STAR", "Acuna's Star Orchid"),
+		    HERB("ORCHID_CIGAR", "Cigar Orchid"),
+		    HERB("ORCHID_CLAM_SHELL", "Clam Shell Orchid"),
+		    HERB("ORCHID_DRAGONS", "Dragon's Mouth Orchid"),
+		    HERB("ORCHID_GHOST", "Ghost Orchid"),
+		    HERB("ORCHID_LADY_NIGHT", "Lady of the Night Orchid"),
+		    HERB("ORCHID_LADY_SLIPPER", "Lady Slipper Orchid"),
+		    HERB("ORCHID_MOCCASIN", "Moccasin Orchid"),
+		    HERB("ORCHID_NIGHT_SCENTED", "Night Scented Orchid"),
+		    HERB("ORCHID_QUEENS", "Queen's Orchid"),
+		    HERB("ORCHID_RAT_TAIL", "Rat Tail Orchid"),
+		    HERB("ORCHID_SPARROWS", "Sparrow's Egg Orchid"),
+		    HERB("ORCHID_SPIDER", "Spider Orchid"),
 		};
 
-		const auto selectedIt = herbTranslations.find(selectedSpHerb);
-		const char* selectedLabel = selectedIt != herbTranslations.end() ? selectedIt->second.c_str() : "(Select Herb)";
+		const char* selectedLabel = "Select Herb";
+		for (const auto& [translation, asset] : herbTranslations){
+			if (asset == selectedSpHerb){
+				selectedLabel = translation.c_str();
+			}
+		}
 
 		if (ImGui::BeginCombo("Herbs", selectedLabel)){
-			for (const auto& [asset, translation] : herbTranslations){
+			for (const auto& [translation, asset] : herbTranslations){
 				const bool isSelected = asset == selectedSpHerb;
 				if (ImGui::Selectable(translation.c_str(), isSelected)){
 					selectedSpHerb = asset;

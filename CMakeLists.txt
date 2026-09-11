@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.20.x)
+cmake_minimum_required(VERSION 3.5)
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 
 project(Terminus VERSION 0.0.1 DESCRIPTION "Terminus, a beta-stage mod menu for Red Dead Redemption 2 and Red Dead Online, inspired by YimMenu, that protects against crashes and enhances your experience.")
 
