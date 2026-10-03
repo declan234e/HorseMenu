@@ -29,6 +29,13 @@ namespace YimMenu
 		static void Toggle()
 		{
 			GetInstance().m_IsOpen ^= true;
+			g_BlockPadInput = GetInstance().m_IsOpen;
+		}
+
+		static void ToggleMenu()
+		{ 
+			Toggle();
+			ToggleMouse();
 		}
 
 		static bool IsUsingKeyboard()

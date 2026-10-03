@@ -3,6 +3,7 @@
 
 #include "core/memory/ModuleMgr.hpp"
 #include "core/memory/PatternScanner.hpp"
+#include "core/input/Controller.hpp"
 #include "game/frontend/GUI.hpp"
 #include "game/frontend/Menu.hpp"
 #include "game/pointers/Pointers.hpp"
@@ -24,7 +25,8 @@ namespace YimMenu
 
 	void Renderer::DestroyImpl()
 	{
-		ImGui_ImplWin32_Shutdown();
+		if (!ImGui::GetCurrentContext())
+			return;
 
 		if (Pointers.IsVulkan)
 		{
@@ -34,12 +36,16 @@ namespace YimMenu
 			vkDestroyInstance(m_VkInstance, m_VkAllocator);
 			ImGui_ImplVulkan_Shutdown();
 		}
-		else if (!Pointers.IsVulkan)
+		else
 		{
-			WaitForLastFrame();
-			ImGui_ImplDX12_Shutdown();
+			if (m_Fence && m_FenceEvent && m_FenceLastSignaledValue > m_Fence->GetCompletedValue())
+			{
+				m_Fence->SetEventOnCompletion(m_FenceLastSignaledValue, m_FenceEvent);
+				WaitForSingleObject(m_FenceEvent, 500);
+			}
 		}
 
+		ImGui_ImplWin32_Shutdown();
 		ImGui::DestroyContext();
 	}
 
@@ -106,7 +112,7 @@ namespace YimMenu
 
 		m_FrameContext.resize(m_SwapChainDesc.BufferCount);
 
-		D3D12_DESCRIPTOR_HEAP_DESC DescriptorDesc{D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, m_SwapChainDesc.BufferCount, D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE};
+		D3D12_DESCRIPTOR_HEAP_DESC DescriptorDesc{D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV, 16, D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE};
 		if (const auto result =
 		        m_Device->CreateDescriptorHeap(&DescriptorDesc, __uuidof(ID3D12DescriptorHeap), (void**)m_DescriptorHeap.GetAddressOf());
 		    result < 0)
@@ -176,13 +182,21 @@ namespace YimMenu
 
 		// never returns false, useless to check return
 		ImGui::CreateContext(&GetInstance().m_FontAtlas);
+
+		ImGui::GetIO().ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+
 		ImGui_ImplWin32_Init(*Pointers.Hwnd);
-		ImGui_ImplDX12_Init(m_Device.Get(),
-		    m_SwapChainDesc.BufferCount,
-		    DXGI_FORMAT_R8G8B8A8_UNORM,
-		    m_DescriptorHeap.Get(),
-		    m_DescriptorHeap->GetCPUDescriptorHandleForHeapStart(),
-		    m_DescriptorHeap->GetGPUDescriptorHandleForHeapStart());
+
+		ImGui_ImplDX12_InitInfo initInfo;
+		initInfo.Device = m_Device.Get();
+		initInfo.CommandQueue = m_CommandQueue.Get();
+		initInfo.NumFramesInFlight = m_SwapChainDesc.BufferCount;
+		initInfo.RTVFormat = DXGI_FORMAT_R8G8B8A8_UNORM;
+		initInfo.DSVFormat = DXGI_FORMAT_UNKNOWN;
+		initInfo.SrvDescriptorHeap = m_DescriptorHeap.Get();
+		initInfo.SrvDescriptorAllocFn = &Renderer::SrvDescriptorAlloc;
+		initInfo.SrvDescriptorFreeFn = &Renderer::SrvDescriptorFree;
+		ImGui_ImplDX12_Init(&initInfo);
 
 		ImGui::StyleColorsDark();
 
@@ -396,7 +410,7 @@ namespace YimMenu
 			VkAttachmentDescription attachment = {};
 			attachment.format                  = VK_FORMAT_B8G8R8A8_UNORM;
 			attachment.samples                 = VK_SAMPLE_COUNT_1_BIT;
-			attachment.loadOp                  = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+			attachment.loadOp                  = VK_ATTACHMENT_LOAD_OP_LOAD;
 			attachment.storeOp                 = VK_ATTACHMENT_STORE_OP_STORE;
 			attachment.stencilLoadOp           = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
 			attachment.stencilStoreOp          = VK_ATTACHMENT_STORE_OP_DONT_CARE;
@@ -667,15 +681,14 @@ namespace YimMenu
 				init_info.Queue                     = GraphicQueue;
 				init_info.PipelineCache             = m_VkPipelineCache;
 				init_info.DescriptorPool            = m_VkDescriptorPool;
-				init_info.Subpass                   = 0;
+				init_info.PipelineInfoMain.RenderPass = m_VkRenderPass;
+				init_info.PipelineInfoMain.Subpass  = 0;
 				init_info.MinImageCount             = m_VkMinImageCount;
 				init_info.ImageCount                = m_VkMinImageCount;
-				init_info.MSAASamples               = VK_SAMPLE_COUNT_1_BIT;
+				init_info.PipelineInfoMain.MSAASamples = VK_SAMPLE_COUNT_1_BIT;
 				init_info.Allocator                 = m_VkAllocator;
 
 				ImGui_ImplVulkan_Init(&init_info);
-
-				ImGui_ImplVulkan_CreateFontsTexture();
 			}
 
 			ImGui_ImplVulkan_NewFrame();
@@ -733,21 +746,12 @@ namespace YimMenu
 			}
 			else
 			{
-				std::vector<VkPipelineStageFlags> stages_wait(waitSemaphoresCount, VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT);
-
 				VkSubmitInfo info       = {};
 				info.sType              = VK_STRUCTURE_TYPE_SUBMIT_INFO;
 				info.commandBufferCount = 1;
 				info.pCommandBuffers    = &fd->CommandBuffer;
 
-				info.pWaitDstStageMask  = stages_wait.data();
-				info.waitSemaphoreCount = waitSemaphoresCount;
-				info.pWaitSemaphores    = pPresentInfo->pWaitSemaphores;
-
-				info.signalSemaphoreCount = 1;
-				info.pSignalSemaphores    = &fsd->ImageAcquiredSemaphore;
-
-				if (const VkResult result = vkQueueSubmit(GraphicQueue, 1, &info, fd->Fence); result != VK_SUCCESS)
+				if (const VkResult result = vkQueueSubmit(queue, 1, &info, fd->Fence); result != VK_SUCCESS)
 				{
 					LOG(WARNING) << "vkQueueSubmit 3 failed with result: [" << result << "]";
 					return;
@@ -788,10 +792,17 @@ namespace YimMenu
 
 		if (Pointers.IsVulkan)
 		{
-			LOG(INFO) << "Using Vulkan";
-			return InitVulkan();
+			LOG(WARNING) << "Vulkan renderer detected. This menu only supports DirectX 12.";
+			MessageBoxA(*Pointers.Hwnd,
+				"Terminus requires DirectX 12.\n\n"
+				"Please switch your graphics API to DirectX 12 in RDR2's settings:\n"
+				"Settings > Graphics > Advanced > Graphics API > DirectX 12\n\n"
+				"Then restart the game and re-inject.",
+				"Terminus - DirectX 12 Required",
+				MB_OK | MB_ICONWARNING);
+			return false;
 		}
-		else if (!Pointers.IsVulkan)
+		else
 		{
 			LOG(INFO) << "Using DX12, clear shader cache if you're having issues.";
 			LOG(INFO) << "Waiting...";
@@ -905,8 +916,26 @@ namespace YimMenu
 		SetResizing(false);
 	}
 
+	void Renderer::SrvDescriptorAlloc(ImGui_ImplDX12_InitInfo* info, D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu)
+	{
+		auto& renderer = GetInstance();
+		int index = renderer.m_NextSrvDescriptorIndex++;
+		auto heap = info->SrvDescriptorHeap;
+		auto increment = info->Device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
+		auto cpuStart = heap->GetCPUDescriptorHandleForHeapStart();
+		auto gpuStart = heap->GetGPUDescriptorHandleForHeapStart();
+		out_cpu->ptr = cpuStart.ptr + index * increment;
+		out_gpu->ptr = gpuStart.ptr + index * increment;
+	}
+
+	void Renderer::SrvDescriptorFree(ImGui_ImplDX12_InitInfo* info, D3D12_CPU_DESCRIPTOR_HANDLE cpu, D3D12_GPU_DESCRIPTOR_HANDLE gpu)
+	{
+		// No-op: descriptors are not recycled in this implementation
+	}
+
 	void Renderer::DX12NewFrame()
 	{
+		Controller::Poll();
 		ImGui_ImplDX12_NewFrame();
 		ImGui_ImplWin32_NewFrame();
 		ImGui::NewFrame();

@@ -16,7 +16,6 @@
 #include "game/rdr/Natives.hpp"
 #include "game/rdr/Pools.hpp"
 
-#include <game/rdr/Natives.hpp>
 #include <rage/fwBasePool.hpp>
 #include <rage/pools.hpp>
 

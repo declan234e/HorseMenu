@@ -73,8 +73,7 @@ namespace YimMenu
 			{
 				SetCursorPos(CursorCoords.x, CursorCoords.y);
 			}
-			Toggle();
-			ToggleMouse();
+			ToggleMenu();
 		}
 	}
 }

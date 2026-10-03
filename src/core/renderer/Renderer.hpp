@@ -1,6 +1,7 @@
 #pragma once
 #include "util/Joaat.hpp"
 
+#include <backends/imgui_impl_dx12.h>
 #include <backends/imgui_impl_vulkan.h>
 #include <comdef.h>
 #include <d3d12.h>
@@ -148,6 +149,8 @@ namespace YimMenu
 	private:
 		static void DX12NewFrame();
 		static void DX12EndFrame();
+		static void SrvDescriptorAlloc(ImGui_ImplDX12_InitInfo* info, D3D12_CPU_DESCRIPTOR_HANDLE* out_cpu, D3D12_GPU_DESCRIPTOR_HANDLE* out_gpu);
+		static void SrvDescriptorFree(ImGui_ImplDX12_InitInfo* info, D3D12_CPU_DESCRIPTOR_HANDLE cpu, D3D12_GPU_DESCRIPTOR_HANDLE gpu);
 
 	private:
 		void DestroyImpl();
@@ -201,6 +204,7 @@ namespace YimMenu
 		UINT64 m_FenceLastSignaledValue;
 		HANDLE m_SwapchainWaitableObject;
 		UINT64 m_FrameIndex;
+		int m_NextSrvDescriptorIndex = 0;
 
 		//Vulkan
 		VkPhysicalDevice m_VkPhysicalDevice;

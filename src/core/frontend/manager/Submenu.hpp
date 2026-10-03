@@ -21,6 +21,7 @@ namespace YimMenu
 		void DrawCategorySelectors();
 		void SetActiveCategory(const std::shared_ptr<Category> category);
 		void Draw();
+		virtual void DrawSidePanel() {}
 
 	private:
 		std::shared_ptr<Category> m_ActiveCategory;
@@ -29,5 +30,6 @@ namespace YimMenu
 		std::vector<std::shared_ptr<Category>> m_Categories;
 		std::string m_Name;
 		std::string m_Icon; // currently unused
+		float m_SidePanelWidth = 0.0f;
 	};
 }

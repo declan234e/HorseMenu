@@ -6,7 +6,7 @@ message(STATUS "Setting up ${LIB_NAME}")
 FetchContent_Declare(
     ${LIB_NAME}
     GIT_REPOSITORY https://github.com/ocornut/imgui.git
-    GIT_TAG 8cc6eee295871bc8852c12372860a50b950d3f56
+    GIT_TAG f1cc2ae
     GIT_PROGRESS TRUE
 )
 
@@ -32,4 +32,5 @@ if(NOT imgui_POPULATED)
         "${imgui_SOURCE_DIR}/misc/cpp"
         "${vulkan_SOURCE_DIR}/include"
     )
+    target_link_libraries(imgui PUBLIC d3d12 dxgi)
 endif()

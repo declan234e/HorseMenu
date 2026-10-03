@@ -44,4 +44,5 @@ namespace YimMenu
 	extern HINSTANCE g_DllInstance;
 	extern HANDLE g_MainThread;
 	extern DWORD g_MainThreadId;
+	extern std::atomic<bool> g_BlockPadInput;
 }

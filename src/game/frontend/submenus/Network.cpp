@@ -206,8 +206,9 @@ namespace YimMenu::Submenus
 						show_player_editor = false;
 						show_new_player    = true;
 					}
-					ImGui::PopID();
 				}
+				ImGui::EndChild();
+				ImGui::PopID();
 			}
 			if (show_new_player)
 			{

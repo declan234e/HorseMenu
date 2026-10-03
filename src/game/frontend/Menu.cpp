@@ -39,8 +39,13 @@ namespace YimMenu
 			    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImU32(ImColor(15, 15, 15)));
 
 			    // Think this add HTML&PHP with no CSS. Lol just for testing.
-			    ImGui::SetNextWindowSize(ImVec2((*Pointers.ScreenResX / 2.5), (*Pointers.ScreenResY / 2.5)), ImGuiCond_Once);
-			    if (ImGui::Begin("Terminus", nullptr, ImGuiWindowFlags_NoDecoration))
+			    float baseW = *Pointers.ScreenResX / 2.5f;
+			    float baseH = *Pointers.ScreenResY / 2.5f;
+			    float extraW = (UIManager::GetActiveSubmenu() && UIManager::GetActiveSubmenu()->m_SidePanelWidth > 0.0f) ?
+			        UIManager::GetActiveSubmenu()->m_SidePanelWidth + 15.0f :
+			        0.0f;
+			    ImGui::SetNextWindowSize(ImVec2(baseW + extraW, baseH), ImGuiCond_Always);
+			    if (ImGui::Begin("Terminus", nullptr, ImGuiWindowFlags_NoScrollbar | ImGuiWindowFlags_NoScrollWithMouse | ImGuiWindowFlags_NoDecoration))
 			    {
 				    //ImGui::BeginDisabled(*Pointers.IsSessionStarted);
 				    if (ImGui::Button("Unload", ImVec2(120, 0)))

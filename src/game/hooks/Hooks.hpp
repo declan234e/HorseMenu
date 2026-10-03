@@ -5,6 +5,7 @@
 #include <dxgi1_4.h>
 #include <network/InFrame.hpp> // has to be imported
 #include <vulkan/vulkan.h>
+#include <Xinput.h>
 
 
 namespace rage
@@ -72,6 +73,7 @@ namespace YimMenu::Hooks
 		extern LRESULT WndProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam);
 		extern BOOL SetCursorPos(int x, int y);
 		extern BOOL ShowWindow(HWND hWnd, int nCmdShow);
+		extern DWORD XInputGetState(DWORD dwUserIndex, XINPUT_STATE* pState);
 	}
 
 	namespace Script

@@ -7,5 +7,6 @@ namespace YimMenu::Submenus
 	{
 	public:
 		Players();
+		void DrawSidePanel() override;
 	};
 }

@@ -40,93 +40,70 @@ namespace YimMenu::Submenus
 		return tags;
 	}
 
-	static void DrawPlayerList(bool external = true, float offset = 15.0f)
+	static void DrawPlayerList()
 	{
 		struct ComparePlayerNames
 		{
 			bool operator()(YimMenu::Player a, YimMenu::Player b) const
 			{
-				std::string nameA = a.GetName();
-				std::string nameB = b.GetName();
-				return nameA < nameB;
+				return a.GetName() < b.GetName();
 			}
 		};
 
 		std::multimap<uint8_t, Player, ComparePlayerNames> sortedPlayers(YimMenu::Players::GetPlayers().begin(),
 		    YimMenu::Players::GetPlayers().end());
 
-		if (external)
+		ImGui::Checkbox("Spectate", &YimMenu::g_Spectating);
+		for (auto& [id, player] : sortedPlayers)
 		{
-			ImGui::SetNextWindowPos(
-			    ImVec2(ImGui::GetWindowPos().x + ImGui::GetWindowSize().x + offset, ImGui::GetWindowPos().y));
-			ImGui::SetNextWindowSize(ImVec2(215, ImGui::GetWindowSize().y));
-			ImGui::Begin("Player List", nullptr, ImGuiWindowFlags_NoDecoration);
+			std::string display_name = player.GetName();
 
-			ImGui::Checkbox("Spectate", &YimMenu::g_Spectating);
-			for (auto& [id, player] : sortedPlayers)
+			ImGui::PushID(id);
+			if (ImGui::Selectable(display_name.c_str(), (YimMenu::Players::GetSelected() == player)))
 			{
-				std::string display_name = player.GetName();
-
-				ImGui::PushID(id);
-				if (ImGui::Selectable(display_name.c_str(), (YimMenu::Players::GetSelected() == player)))
-				{
-					YimMenu::Players::SetSelected(id);
-				}
-				ImGui::PopID();
-
-				if (player.IsModder() && ImGui::IsItemHovered())
-				{
-					ImGui::BeginTooltip();
-					for (auto detection : player.GetData().m_Detections)
-						ImGui::BulletText("%s", g_PlayerDatabase->ConvertDetectionToDescription(detection).c_str());
-					ImGui::EndTooltip();
-				}
-
-				auto tags = GetPlayerTags(player);
-
-				auto old_item_spacing = ImGui::GetStyle().ItemSpacing.x;
-
-				for (auto& tag : tags)
-				{
-					ImGui::SameLine();
-					ImGui::PushStyleColor(ImGuiCol_Text, tag.Color);
-					ImGui::Text(("[" + tag.Name + "]").c_str());
-					ImGui::PopStyleColor();
-					ImGui::GetStyle().ItemSpacing.x = 1;
-				}
-
-				ImGui::GetStyle().ItemSpacing.x = old_item_spacing;
+				YimMenu::Players::SetSelected(id);
 			}
-			ImGui::End();
-		}
-		else
-		{
-			if (ImGui::BeginCombo("Players", YimMenu::Players::GetSelected().GetName()))
+			ImGui::PopID();
+
+			if (player.IsModder() && ImGui::IsItemHovered())
 			{
-				for (auto& [id, player] : sortedPlayers)
-				{
-					if (ImGui::Selectable(player.GetName(), (YimMenu::Players::GetSelected() == player)))
-					{
-						YimMenu::Players::SetSelected(id);
-					}
-				}
-				ImGui::EndCombo();
+				ImGui::BeginTooltip();
+				for (auto detection : player.GetData().m_Detections)
+					ImGui::BulletText("%s", g_PlayerDatabase->ConvertDetectionToDescription(detection).c_str());
+				ImGui::EndTooltip();
 			}
+
+			auto tags = GetPlayerTags(player);
+
+			auto old_item_spacing = ImGui::GetStyle().ItemSpacing.x;
+
+			for (auto& tag : tags)
+			{
+				ImGui::SameLine();
+				ImGui::PushStyleColor(ImGuiCol_Text, tag.Color);
+				ImGui::Text(("[" + tag.Name + "]").c_str());
+				ImGui::PopStyleColor();
+				ImGui::GetStyle().ItemSpacing.x = 1;
+			}
+
+			ImGui::GetStyle().ItemSpacing.x = old_item_spacing;
 		}
+	}
+
+	void Players::DrawSidePanel()
+	{
+		DrawPlayerList();
 	}
 
 	Players::Players() :
 	    Submenu::Submenu("Players")
 	{
+		m_SidePanelWidth = 215.0f;
+
 		AddCategory(std::move(BuildInfoMenu()));
 		AddCategory(std::move(BuildHelpfulMenu()));
 		AddCategory(std::move(BuildTrollingMenu()));
 		AddCategory(std::move(BuildToxicMenu()));
 		AddCategory(std::move(BuildKickMenu()));
-
-		for (auto& category : m_Categories)
-			category->PrependItem(std::make_shared<ImGuiItem>([] {
-				DrawPlayerList();
-			}));
 	}
 }

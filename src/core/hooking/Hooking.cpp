@@ -43,6 +43,11 @@ namespace YimMenu
 	{ 
 		BaseHook::Add<Hooks::Window::ShowWindow>(new DetourHook("ShowWindow", ModuleMgr.Get("user32.dll")->GetExport<void*>("ShowWindow"), Hooks::Window::ShowWindow));
 
+		if (auto xinput = ModuleMgr.Get("xinput9_1_0.dll"))
+			BaseHook::Add<Hooks::Window::XInputGetState>(new DetourHook("XInputGetState", xinput->GetExport<void*>("XInputGetState"), Hooks::Window::XInputGetState));
+		else
+			LOG(WARNING) << "xinput9_1_0.dll not loaded, could not hook XInputGetState";
+
 		BaseHook::Add<Hooks::Anticheat::SendMetric>(new DetourHook("SendMetric", Pointers.SendMetric, Hooks::Anticheat::SendMetric));
 		BaseHook::Add<Hooks::Anticheat::QueueDependency>(new DetourHook("QueueDependency", Pointers.QueueDependency, Hooks::Anticheat::QueueDependency));
 		BaseHook::Add<Hooks::Anticheat::UnkFunction>(new DetourHook("UnkFunction", Pointers.UnkFunction, Hooks::Anticheat::UnkFunction));

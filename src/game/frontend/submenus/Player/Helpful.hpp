@@ -5,4 +5,5 @@
 namespace YimMenu::Submenus
 {
 	std::shared_ptr<Category> BuildHelpfulMenu();
+	void RenderChestSpawnerMenu();
 }

@@ -10,7 +10,7 @@ namespace
     // a small helper to quickly check the mixed value flag.
     inline bool IsItemMixedValue()
     {
-        return (GImGui->LastItemData.InFlags & ImGuiItemFlags_MixedValue) != 0;
+        return (GImGui->LastItemData.ItemFlags & ImGuiItemFlags_MixedValue) != 0;
     }
 } // namespace
 
@@ -135,6 +135,7 @@ bool ImGuiToggleRenderer::ToggleBehavior(const ImRect& interaction_bounding_box)
     const ImGuiButtonFlags button_flags = ImGuiButtonFlags_PressedOnClick;
     bool hovered, held;
     bool pressed = ImGui::ButtonBehavior(interaction_bounding_box, _id, &hovered, &held, button_flags);
+	ImGui::RenderNavCursor(interaction_bounding_box, _id);
     if (pressed)
     {
         *_value = !(*_value);
