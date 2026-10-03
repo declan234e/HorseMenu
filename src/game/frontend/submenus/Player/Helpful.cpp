@@ -10,7 +10,7 @@ namespace YimMenu::Submenus
 		ImGui::PushID("ChestSpawner");
 		static int amount = 3;
 		ImGui::PushItemWidth(120);
-		ImGui::SliderInt("Amount of gold bars", &amount, 1, 10);
+		ImGui::SliderInt("Amount of reward item", &amount, 1, 10);
 		ImGui::PopItemWidth();
 		if (ImGui::Button("Spawn Treasure Chest"))
 		{
