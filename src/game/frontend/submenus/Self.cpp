@@ -228,6 +228,7 @@ namespace YimMenu::Submenus
 		vehicleGlobalsGroup->AddItem(std::make_shared<BoolCommandItem>("vehiclegodmode"_J));
 		vehicleGlobalsGroup->AddItem(std::make_shared<BoolCommandItem>("vehiclenodetach"_J));
 		vehicleGlobalsGroup->AddItem(std::make_shared<BoolCommandItem>("flaminghoovesdraft"_J));
+		vehicleGlobalsGroup->AddItem(std::make_shared<CommandItem>("destroyvehicle"_J));
 		vehicleGlobalsGroup->AddItem(std::make_shared<CommandItem>("repairvehicle"_J));
 
 		vehicleFunGroup->AddItem(std::make_shared<BoolCommandItem>("superdrive"_J));

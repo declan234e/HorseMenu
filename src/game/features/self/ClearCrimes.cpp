@@ -11,7 +11,6 @@ namespace YimMenu::Features
 		{
 			char guid[0x20];
 			BOUNTY::_BOUNTY_REQUEST_SERVED_FULL_JAIL_SENTENCE(guid);
-			LAW::CLEAR_BOUNTY(PLAYER::PLAYER_ID());
 		}
 	};
 
